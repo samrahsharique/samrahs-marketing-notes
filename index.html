@@ -13,6 +13,7 @@
       --muted: #6b7280;
       --accent: #111827;
       --border: #e5e7eb;
+      --gradient: linear-gradient(135deg,#111827,#4f46e5);
     }
 
     * { box-sizing: border-box; }
@@ -26,7 +27,7 @@
     }
 
     header {
-      padding: 60px 20px 40px;
+      padding: 60px 20px 30px;
       text-align: center;
       background: linear-gradient(to bottom, #ffffff, #f7f7f9);
       border-bottom: 1px solid var(--border);
@@ -57,17 +58,74 @@
       font-size: 14px;
     }
 
-    .container {
+    .hero {
+      max-width: 900px;
+      margin: 40px auto 10px;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .collage {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+      gap: 14px;
+    }
+
+    .collage img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 14px;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .collage img:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 25px rgba(0,0,0,.15);
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--gradient);
+      margin-top: 8px;
+      border-radius: 999px;
     }
 
     .post {
       background: var(--card);
-      padding: 28px;
+      padding: 26px;
       border-radius: 16px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       border: 1px solid var(--border);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
@@ -79,18 +137,14 @@
 
     .post-title {
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      margin: 0 0 8px;
+      font-size: 22px;
+      margin: 0 0 6px;
     }
 
     .post-meta {
       font-size: 13px;
       color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    .post-excerpt {
-      font-size: 15px;
+      margin-bottom: 10px;
     }
 
     footer {
@@ -100,61 +154,57 @@
       font-size: 14px;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      text-decoration: none;
-      font-size: 13px;
-      color: var(--accent);
-      transition: all 0.2s ease;
-    }
-
-    .btn:hover {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-    }
-
     @media (max-width: 640px) {
-      .title { font-size: 32px; }
-      .post { padding: 20px; }
+      .title { font-size: 30px; }
+      .hero h2 { font-size: 26px; }
     }
   </style>
 </head>
 <body>
   <header>
     <h1 class="title">Samrah's Marketing Notes</h1>
-    <p class="subtitle">Simple insights on branding, growth, and consumer psychology.</p>
+    <p class="subtitle">Where marketing meets human psychology.</p>
     <nav>
       <a href="#">Home</a>
       <a href="#">Articles</a>
       <a href="#">About</a>
-      <a href="#">Contact</a>
     </nav>
   </header>
 
-  <main class="container">
-    <article class="post">
-      <h2 class="post-title">Why Emotional Branding Wins in 2026</h2>
-      <div class="post-meta">February 2026 • 5 min read</div>
-      <p class="post-excerpt">
-        In an attention-scarce world, brands that build emotional memory structures outperform those that rely only on performance marketing. Here's what marketers often miss…
-      </p>
-      <a class="btn" href="#">Read more</a>
-    </article>
+  <section class="hero">
+    <h2>The sweet intersection of marketing and human psychology</h2>
+    <p>
+      This is my personal archive of campaigns, brand moves, and behavioral triggers that make people stop, feel, and act. Marketing is rarely about what brands say — it is about what people remember.
+    </p>
+  </section>
 
+  <!-- Campaign collage -->
+  <section class="collage">
+    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df" alt="campaign">
+    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="campaign">
+    <img src="https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2" alt="campaign">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="campaign">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="campaign">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="campaign">
+  </section>
+
+  <section class="section">
+    <h3 class="section-title">Crazy Campaigns</h3>
     <article class="post">
-      <h2 class="post-title">The Psychology Behind High-Converting Landing Pages</h2>
-      <div class="post-meta">Coming soon</div>
-      <p class="post-excerpt">
-        Conversion is rarely about buttons and colors. It is about cognitive friction, trust signals, and message clarity. A breakdown is coming soon.
-      </p>
-      <a class="btn" href="#">Read more</a>
+      <h4 class="post-title">#ScaryClownNight — Fear as a growth hack</h4>
+      <div class="post-meta">Case breakdown</div>
+      <p>When brands tap into cultural moments, they don't just advertise — they participate. This campaign is a masterclass in reactive marketing.</p>
     </article>
-  </main>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title">Analysing Brand Strategies</h3>
+    <article class="post">
+      <h4 class="post-title">Why emotional memory beats performance marketing</h4>
+      <div class="post-meta">Strategy note</div>
+      <p>A deep dive into how distinctive brand assets and emotional encoding drive long-term growth.</p>
+    </article>
+  </section>
 
   <footer>
     © 2026 Samrah Sharique • Built with curiosity and good marketing.
