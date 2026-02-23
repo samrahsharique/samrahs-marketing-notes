@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samrah's Marketing Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f7f9;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #111827;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 60px 20px 40px;
+      text-align: center;
+      background: linear-gradient(to bottom, #ffffff, #f7f7f9);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      margin: 0;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    nav {
+      margin-top: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .post {
+      background: var(--card);
+      padding: 28px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .post:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin: 0 0 8px;
+    }
+
+    .post-meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .post-excerpt {
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      font-size: 13px;
+      color: var(--accent);
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .title { font-size: 32px; }
+      .post { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="title">Samrah's Marketing Notes</h1>
+    <p class="subtitle">Simple insights on branding, growth, and consumer psychology.</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Articles</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="post">
+      <h2 class="post-title">Why Emotional Branding Wins in 2026</h2>
+      <div class="post-meta">February 2026 • 5 min read</div>
+      <p class="post-excerpt">
+        In an attention-scarce world, brands that build emotional memory structures outperform those that rely only on performance marketing. Here's what marketers often miss…
+      </p>
+      <a class="btn" href="#">Read more</a>
+    </article>
+
+    <article class="post">
+      <h2 class="post-title">The Psychology Behind High-Converting Landing Pages</h2>
+      <div class="post-meta">Coming soon</div>
+      <p class="post-excerpt">
+        Conversion is rarely about buttons and colors. It is about cognitive friction, trust signals, and message clarity. A breakdown is coming soon.
+      </p>
+      <a class="btn" href="#">Read more</a>
+    </article>
+  </main>
+
+  <footer>
+    © 2026 Samrah Sharique • Built with curiosity and good marketing.
+  </footer>
+</body>
+</html>
