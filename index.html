@@ -74,7 +74,7 @@
       font-size: 17px;
     }
 
-    /* PREMIUM CAROUSEL */
+    /* CLEAN PREMIUM CAROUSEL (NO ARROWS) */
     .carousel-wrapper {
       max-width: 1000px;
       margin: 40px auto;
@@ -106,31 +106,6 @@
       object-fit: cover;
       display: block;
     }
-
-    /* arrows
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(6px);
-      border: 1px solid var(--border);
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 20px;
-      transition: all .25s ease;
-      z-index: 10;
-    }
-
-    .carousel-btn:hover {
-      background: white;
-      transform: translateY(-50%) scale(1.08);
-    } 
-
-    .prev { left: 10px; }
-    .next { right: 10px; } */
 
     /* dots */
     .carousel-dots {
@@ -235,38 +210,31 @@
     </p>
   </section>
 
-  <!-- PREMIUM 4-SLIDE CAROUSEL -->
+  <!-- PREMIUM 4-SLIDE CAROUSEL (NO ARROWS) -->
   <section class="carousel-wrapper">
-   
-
     <div class="carousel">
-<div class="carousel-track" id="track">
-  <div class="carousel-slide">
-    <img src="all-about-brands.jpg" alt="All About Brands">
-  </div>
-
-  <div class="carousel-slide">
-    <img src="brands.jpg" alt="Brands">
-  </div>
-
-  <div class="carousel-slide">
-    <img src="buzz-worthy-campaigns.jpg" alt="Buzz Worthy Campaigns">
-  </div>
-
-  <div class="carousel-slide">
-    <img src="campaigns.jpg" alt="Campaigns">
-  </div>
-</div>
+      <div class="carousel-track" id="track">
+        <div class="carousel-slide">
+          <img src="all-about-brands.jpg" alt="All About Brands">
+        </div>
+        <div class="carousel-slide">
+          <img src="brands.jpg" alt="Brands">
+        </div>
+        <div class="carousel-slide">
+          <img src="buzz-worthy-campaigns.jpg" alt="Buzz Worthy Campaigns">
+        </div>
+        <div class="carousel-slide">
+          <img src="campaigns.jpg" alt="Campaigns">
+        </div>
+      </div>
     </div>
 
-  
-
-<div class="carousel-dots">
-  <span class="dot active" onclick="goToSlide(0)"></span>
-  <span class="dot" onclick="goToSlide(1)"></span>
-  <span class="dot" onclick="goToSlide(2)"></span>
-  <span class="dot" onclick="goToSlide(3)"></span>
-</div>
+    <div class="carousel-dots">
+      <span class="dot active" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+      <span class="dot" onclick="goToSlide(3)"></span>
+    </div>
   </section>
 
   <section class="section">
@@ -301,12 +269,6 @@
       dots.forEach((d, i) => d.classList.toggle('active', i === current));
     }
 
-    function moveSlide(dir) {
-      const slides = track.children.length;
-      current = (current + dir + slides) % slides;
-      updateCarousel();
-    }
-
     function goToSlide(index) {
       current = index;
       updateCarousel();
@@ -314,7 +276,9 @@
 
     // AUTO SLIDE
     setInterval(() => {
-      moveSlide(1);
+      const slides = track.children.length;
+      current = (current + 1) % slides;
+      updateCarousel();
     }, 4000);
 
     // TOUCH SWIPE
@@ -322,22 +286,9 @@
     track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
     track.addEventListener('touchend', e => {
       let endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) moveSlide(1);
-      if (endX - startX > 50) moveSlide(-1);
+      if (startX - endX > 50) goToSlide((current + 1) % track.children.length);
+      if (endX - startX > 50) goToSlide((current - 1 + track.children.length) % track.children.length);
     });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
