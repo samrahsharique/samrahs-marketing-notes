@@ -28,6 +28,13 @@ h1{
   margin-bottom:50px;
   text-align:center;
 }
+
+/* elegant future-ready grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,340px));
+  gap:28px;
+  justify-content:start;
 }
 
 /* campaign tile */
@@ -92,6 +99,7 @@ h1{
 
   <div class="grid">
 
+```
 <!-- live article tile -->
 <a class="tile" href="../scary-clown-night.html">
   <img src="scary-clown-night.jpg" alt="Scary Clown Night">
@@ -100,6 +108,12 @@ h1{
     <p>Burger King’s media planning masterclass.</p>
   </div>
 </a>
+
+<!-- future placeholders -->
+<div class="placeholder">Future campaign tile</div>
+<div class="placeholder">Future campaign tile</div>
+```
+
   </div>
 </div>
 </body>
