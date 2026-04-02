@@ -18,26 +18,24 @@ body{
 
 .container{
   max-width:1200px;
-  margin:80px auto;
-  padding:0 32px;
+  margin:60px auto;
+  padding:0 24px;
 }
 
 h1{
   font-family:"Playfair Display", serif;
-  font-size:52px;
-  margin-bottom:50px;
+  font-size:56px;
+  margin-bottom:60px;
   text-align:center;
 }
 
-/* elegant future-ready grid */
+/* single centered tile */
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,340px));
-  gap:28px;
-  justify-content:start;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-/* campaign tile */
 .tile{
   background:white;
   border-radius:22px;
@@ -46,7 +44,7 @@ h1{
   color:inherit;
   box-shadow:0 10px 30px rgba(0,0,0,.06);
   transition:all .25s ease;
-  max-width:340px;
+  width:410px;
 }
 
 .tile:hover{
@@ -56,7 +54,7 @@ h1{
 
 .tile img{
   width:100%;
-  height:180px;
+  height:220px;
   object-fit:cover;
   display:block;
 }
@@ -76,19 +74,6 @@ h1{
   margin:0;
   line-height:1.5;
 }
-
-/* optional placeholders */
-.placeholder{
-  border:1px dashed #d1d5db;
-  border-radius:22px;
-  height:280px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#9ca3af;
-  font-size:14px;
-  background:rgba(255,255,255,0.5);
-}
 </style>
 
 </head>
@@ -98,22 +83,13 @@ h1{
   <h1>Campaigns</h1>
 
   <div class="grid">
-
-```
-<!-- live article tile -->
-<a class="tile" href="../scary-clown-night.html">
-  <img src="scary-clown-night.jpg" alt="Scary Clown Night">
-  <div class="content">
-    <h2>#ScaryClownNight</h2>
-    <p>Burger King’s media planning masterclass.</p>
-  </div>
-</a>
-
-<!-- future placeholders -->
-<div class="placeholder">Future campaign tile</div>
-<div class="placeholder">Future campaign tile</div>
-```
-
+    <a class="tile" href="../scary-clown-night.html">
+      <img src="scary-clown-night.jpg" alt="Scary Clown Night">
+      <div class="content">
+        <h2>#ScaryClownNight</h2>
+        <p>Burger King’s media planning masterclass.</p>
+      </div>
+    </a>
   </div>
 </div>
 </body>
