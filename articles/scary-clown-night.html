@@ -4,69 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Burger King's "Scary Clown Night" — Samrah Sharique</title>
-  <meta name="description" content="A masterclass in strategic media planning, cultural timing, and earned media multiplication." />
+  <meta name="description" content="How Burger King turned a Halloween costume into a global earned media event — and what it actually teaches us about cultural timing and participation mechanics." />
   <meta property="og:title" content="Burger King's "Scary Clown Night"" />
-  <meta property="og:description" content="A masterclass in strategic media planning, cultural timing, and earned media multiplication." />
+  <meta property="og:description" content="How Burger King turned a Halloween costume into a global earned media event." />
   <meta property="og:type" content="article" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream: #faf8f4;
-      --ink: #1a1814;
-      --ink-muted: #6b6760;
-      --ink-faint: #a09d98;
-      --rule: rgba(26,24,20,0.12);
-      --rule-strong: rgba(26,24,20,0.22);
-      --surface: #f2efe9;
-      --accent: #c0392b;
+      --bg:           #ffffff;
+      --bg-surface:   #f5f4f1;
+      --bg-card:      #edece8;
+      --ink:          #17150f;
+      --ink-mid:      #3a3830;
+      --ink-muted:    #57554e;
+      --ink-faint:    #8a8880;
+      --rule:         rgba(23,21,15,0.10);
+      --rule-mid:     rgba(23,21,15,0.18);
+      --rule-strong:  rgba(23,21,15,0.28);
       --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
-      --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-      --font-ui: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-body:    'Source Serif 4', Georgia, 'Times New Roman', serif;
+      --font-ui:      system-ui, -apple-system, 'Segoe UI', sans-serif;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --cream: #16140f;
-        --ink: #f0ece4;
-        --ink-muted: #a09d98;
-        --ink-faint: #6b6760;
-        --rule: rgba(240,236,228,0.12);
-        --rule-strong: rgba(240,236,228,0.22);
-        --surface: #1e1c17;
-        --accent: #e05a4a;
+        --bg:           #0f0e09;
+        --bg-surface:   #1a1814;
+        --bg-card:      #222019;
+        --ink:          #f0ece2;
+        --ink-mid:      #ccc8bc;
+        --ink-muted:    #a8a49a;
+        --ink-faint:    #6a6760;
+        --rule:         rgba(240,236,226,0.08);
+        --rule-mid:     rgba(240,236,226,0.15);
+        --rule-strong:  rgba(240,236,226,0.26);
       }
     }
 
     html { font-size: 16px; scroll-behavior: smooth; }
 
     body {
-      background-color: var(--cream);
+      background-color: var(--bg);
       color: var(--ink);
       font-family: var(--font-body);
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.82;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /* ── Page fade in ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(14px); }
+      from { opacity: 0; transform: translateY(12px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+
     .article-root {
-      max-width: 720px;
+      max-width: 700px;
       margin: 0 auto;
       padding: 3.5rem 2rem 6rem;
-      animation: fadeUp 0.6s ease both;
+      animation: fadeUp 0.55s ease both;
     }
 
-    /* ── Back link ── */
+    /* Back link */
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -77,45 +81,45 @@
       text-decoration: none;
       letter-spacing: 0.02em;
       margin-bottom: 3rem;
-      transition: color 0.2s;
+      transition: color 0.18s;
     }
     .back-link:hover { color: var(--ink); }
-    .back-link svg { transition: transform 0.2s; }
+    .back-link svg { transition: transform 0.18s; }
     .back-link:hover svg { transform: translateX(-3px); }
 
-    /* ── Kicker ── */
+    /* Kicker */
     .article-kicker {
       font-family: var(--font-ui);
       font-size: 11px;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--ink-faint);
-      margin-bottom: 1rem;
+      margin-bottom: 0.9rem;
     }
 
-    /* ── Title ── */
+    /* Title */
     h1.article-title {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 5.5vw, 2.9rem);
+      font-size: clamp(2.1rem, 5.5vw, 3rem);
       font-weight: 600;
-      line-height: 1.15;
+      line-height: 1.13;
       letter-spacing: -0.015em;
       color: var(--ink);
       margin-bottom: 1.1rem;
     }
 
-    /* ── Subtitle ── */
+    /* Subtitle */
     .article-subtitle {
       font-family: var(--font-body);
-      font-size: 1.12rem;
-      font-weight: 300;
+      font-size: 1.1rem;
+      font-weight: 400;
       font-style: italic;
-      line-height: 1.65;
+      line-height: 1.6;
       color: var(--ink-muted);
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.6rem;
     }
 
-    /* ── Byline ── */
+    /* Byline */
     .byline-row {
       font-family: var(--font-ui);
       font-size: 13px;
@@ -124,7 +128,6 @@
       align-items: center;
       gap: 10px;
       letter-spacing: 0.02em;
-      margin-bottom: 0.25rem;
     }
     .byline-dot {
       width: 3px; height: 3px;
@@ -133,44 +136,41 @@
       display: inline-block;
     }
 
-    /* ── Rules ── */
-    .rule { border: none; border-top: 0.5px solid var(--rule); margin: 2.25rem 0; }
-    .rule-strong { border: none; border-top: 1px solid var(--rule-strong); margin: 2.5rem 0; }
+    /* Rules */
+    .rule        { border: none; border-top: 0.5px solid var(--rule-mid);    margin: 2.25rem 0; }
+    .rule-strong { border: none; border-top: 1px   solid var(--rule-strong); margin: 2.5rem 0; }
 
-    /* ── Lede ── */
+    /* Lede */
     .lede {
-      font-size: 1.06rem;
+      font-size: 1.08rem;
       line-height: 1.82;
-      font-weight: 300;
+      font-weight: 400;
+      color: var(--ink);
       margin-bottom: 1.5rem;
     }
-    .lede strong {
-      font-weight: 600;
-      font-style: italic;
-      color: var(--ink);
-    }
+    .lede strong { font-weight: 600; font-style: italic; }
 
-    /* ── Body copy ── */
+    /* Body copy */
     .article-body p {
       font-size: 1rem;
       line-height: 1.85;
-      font-weight: 300;
+      font-weight: 400;
+      color: var(--ink-mid);
       margin-bottom: 1.3rem;
-      color: var(--ink);
     }
 
-    /* ── Section markers ── */
+    /* Section number */
     .section-num {
       font-family: var(--font-ui);
       font-size: 11px;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--ink-faint);
       margin-top: 2.75rem;
       margin-bottom: 0.3rem;
     }
 
-    /* ── Section headings ── */
+    /* Section headings */
     .article-body h2 {
       font-family: var(--font-display);
       font-size: 1.3rem;
@@ -178,10 +178,10 @@
       font-style: italic;
       line-height: 1.35;
       color: var(--ink);
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.9rem;
     }
 
-    /* ── Pull quote ── */
+    /* Pull quote */
     .pull-quote {
       font-family: var(--font-display);
       font-size: clamp(1.2rem, 3vw, 1.45rem);
@@ -191,8 +191,7 @@
       color: var(--ink);
       text-align: center;
       padding: 2.25rem 1.5rem;
-      margin: 2.5rem 0;
-      position: relative;
+      margin: 2.75rem 0;
     }
     .pull-quote::before,
     .pull-quote::after {
@@ -204,23 +203,55 @@
     .pull-quote::before { margin-bottom: 1.5rem; }
     .pull-quote::after  { margin-top: 1.5rem; }
 
-    /* ── Callout block ── */
+    /* Callout block */
     .callout-block {
-      border-left: 2px solid var(--rule-strong);
-      padding: 0.85rem 1.35rem;
+      border-left: 2.5px solid var(--rule-strong);
+      padding: 0.9rem 1.4rem;
       margin: 2rem 0;
-      background: var(--surface);
+      background: var(--bg-surface);
       border-radius: 0 6px 6px 0;
     }
     .callout-block p {
       margin: 0 !important;
-      font-size: 0.95rem !important;
-      line-height: 1.72 !important;
-      color: var(--ink-muted) !important;
+      font-size: 0.96rem !important;
+      line-height: 1.75 !important;
+      color: var(--ink-mid) !important;
       font-style: italic;
     }
 
-    /* ── CDJ grid ── */
+    /* Stats band */
+    .stats-band {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      margin: 1.75rem 0;
+    }
+    .stat-box {
+      background: var(--bg-card);
+      border-radius: 8px;
+      padding: 1.1rem 0.9rem;
+      text-align: center;
+      border: 0.5px solid var(--rule-mid);
+    }
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.15;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .stat-label {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      line-height: 1.4;
+    }
+
+    /* CDJ grid */
     .cdj-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0,1fr));
@@ -228,10 +259,10 @@
       margin: 1.1rem 0 1.75rem;
     }
     .cdj-step {
-      background: var(--surface);
-      border: 0.5px solid var(--rule);
+      background: var(--bg-surface);
+      border: 0.5px solid var(--rule-mid);
       border-radius: 8px;
-      padding: 0.85rem 0.75rem;
+      padding: 0.9rem 0.75rem;
       text-align: center;
     }
     .cdj-label {
@@ -247,10 +278,10 @@
       font-size: 12px;
       line-height: 1.5;
       font-weight: 400;
-      color: var(--ink-muted);
+      color: var(--ink-mid);
     }
 
-    /* ── Insight list ── */
+    /* Insight list */
     .insight-list {
       list-style: none;
       padding: 0;
@@ -260,11 +291,12 @@
       display: flex;
       gap: 16px;
       align-items: baseline;
-      padding: 0.65rem 0;
+      padding: 0.75rem 0;
       border-bottom: 0.5px solid var(--rule);
       font-size: 0.97rem;
-      line-height: 1.72;
-      font-weight: 300;
+      line-height: 1.75;
+      font-weight: 400;
+      color: var(--ink-mid);
     }
     .insight-list li:last-child { border-bottom: none; }
     .insight-num {
@@ -274,16 +306,18 @@
       min-width: 18px;
       letter-spacing: 0.06em;
       padding-top: 3px;
+      flex-shrink: 0;
     }
     .insight-label {
-      font-weight: 400;
+      font-weight: 600;
       font-style: italic;
+      color: var(--ink);
       margin-right: 4px;
     }
 
-    /* ── Reference card ── */
+    /* Reference card */
     .reference-card {
-      background: var(--cream);
+      background: var(--bg-surface);
       border: 0.5px solid var(--rule-strong);
       border-radius: 10px;
       padding: 1.5rem 1.75rem;
@@ -292,7 +326,7 @@
     .reference-card h3 {
       font-family: var(--font-ui);
       font-size: 10px;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--ink-faint);
       margin-bottom: 1.1rem;
@@ -301,44 +335,46 @@
     .term-row {
       display: flex;
       gap: 16px;
-      padding: 0.55rem 0;
+      padding: 0.6rem 0;
       border-bottom: 0.5px solid var(--rule);
-      font-size: 0.92rem;
-      line-height: 1.6;
+      font-size: 0.93rem;
+      line-height: 1.65;
     }
     .term-row:last-child { border-bottom: none; }
     .term-name {
       font-family: var(--font-ui);
-      font-weight: 500;
+      font-weight: 600;
       font-size: 11px;
-      letter-spacing: 0.06em;
-      color: var(--ink-faint);
-      min-width: 70px;
+      letter-spacing: 0.05em;
+      color: var(--ink-mid);
+      min-width: 90px;
       padding-top: 2px;
       flex-shrink: 0;
     }
     .term-def {
-      font-weight: 300;
+      font-weight: 400;
       color: var(--ink-muted);
     }
 
-    /* ── Closing note ── */
+    /* Closing note */
     .closing-note {
       font-style: italic;
-      font-weight: 300;
-      color: var(--ink-muted);
-      font-size: 0.97rem;
+      font-weight: 400;
+      color: var(--ink-mid);
+      font-size: 1rem;
       margin-top: 2rem;
-      line-height: 1.8;
+      line-height: 1.82;
+      border-top: 0.5px solid var(--rule-mid);
+      padding-top: 1.75rem;
     }
 
-    /* ── Responsive ── */
+    /* Responsive */
     @media (max-width: 600px) {
       .article-root { padding: 2.5rem 1.25rem 4rem; }
       .cdj-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
-    @media (max-width: 380px) {
-      .cdj-grid { grid-template-columns: 1fr 1fr; }
+    @media (max-width: 400px) {
+      .stats-band { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -357,7 +393,7 @@
 
     <h1 class="article-title">Burger King's "Scary Clown Night"</h1>
 
-    <p class="article-subtitle">A masterclass in strategic media planning, cultural timing, and earned media multiplication.</p>
+    <p class="article-subtitle">How a Halloween costume became a global earned media event — and what it actually teaches us about cultural timing, participation mechanics, and competitive strategy.</p>
 
     <div class="byline-row">
       <span>Samrah Sharique</span>
@@ -367,117 +403,139 @@
 
     <hr class="rule-strong" />
 
-    <p class="lede">Some campaigns sell products. A rarer class <strong>reshapes how marketers think</strong> — about media efficiency, cultural timing, rivalry, and how consumer behavior itself can become distribution. Burger King's 2017 Halloween activation belongs firmly in the second category.</p>
+    <p class="lede">Some campaigns sell products. A rarer class <strong>reshapes how marketers think</strong> — about cultural timing, rivalry, and how consumer behaviour itself can become distribution. Burger King's Halloween 2017 activation belongs firmly in the second category.</p>
 
     <div class="article-body">
 
-      <p>On the surface, it was a cheeky seasonal offer: come dressed as a clown, get a free Whopper. In practice, it was an integrated activation engineered for low paid input and high earned output — a planner's dream if you care about ROMI, reach multiplication, and customer-journey handoffs.</p>
+      <p>On the surface it was a cheeky seasonal offer: come dressed as a clown, get a free Whopper. In practice it was a participation mechanic engineered to generate earned media at a scale no paid budget alone could replicate. Conceived by LOLA MullenLowe in Madrid, the campaign ran across more than 30 countries, involved over 1,500 restaurants, and drew roughly 110,000 people through the doors dressed as clowns on Halloween night 2017.</p>
+
+      <div class="stats-band">
+        <div class="stat-box">
+          <span class="stat-value">2.1B</span>
+          <span class="stat-label">Earned impressions</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-value">$22.4M</span>
+          <span class="stat-label">Total media value</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-value">1,100+</span>
+          <span class="stat-label">Articles, 40 countries</span>
+        </div>
+      </div>
 
       <p class="section-num">01</p>
-      <h2>Why it worked before it launched</h2>
-      <p>Great campaigns begin with context. In 2017, clowns had re-entered popular culture with unusual intensity — helped by cultural heat around <em>It</em> and the broader creepy clown phenomenon. Meanwhile, Burger King's most iconic competitor had one of the world's most recognizable mascots: a clown.</p>
-      <p>That produced a rare alignment: Halloween + clown fear + competitor symbolism. The campaign wasn't built around product features. It was built around a cultural insight and a rivalry-coded symbol, which is precisely how high-impact planning is supposed to work.</p>
+      <h2>Why the context was everything</h2>
+
+      <p>The campaign's strategic foundation is not a creative idea — it is a cultural observation made at the right moment. The clown-as-horror figure had been building in public consciousness since 2016, when a wave of "creepy clown" sightings spread across the United States and then globally. McDonald's even suspended Ronald McDonald's public appearances that year in response to the climate. Then in September 2017, the release of Stephen King's <em>It</em> added a fresh wave of cultural energy: Pennywise became the defining Halloween image of the season, and Google Trends confirmed clowns as the third most searched Halloween costume of the year.</p>
+
+      <p>Burger King entered this moment with a structurally unique advantage: their main competitor's mascot was a clown. That produced a rare three-way alignment — Halloween timing, genuine cultural clown anxiety, and a ready-made competitive symbol — that the campaign didn't manufacture so much as identify and act on quickly.</p>
+
+      <div class="callout-block">
+        <p>The insight wasn't invented in a creative brief. It was already in the culture. What LOLA MullenLowe did was recognise the window and move before it closed.</p>
+      </div>
 
       <blockquote class="pull-quote">
         The audience is not merely reached —<br>the audience becomes the medium.
       </blockquote>
 
       <p class="section-num">02</p>
-      <h2>The big media idea: turning participation into inventory</h2>
-      <p>The creative idea ("come as a clown, eat like a king") was entertaining. The media idea was more powerful: convert a costume behavior into a global traffic event.</p>
-      <p>Every participant arriving dressed as a clown became physical proof of activation, organic social content, a PR trigger, a word-of-mouth engine, and live brand theatre — the store itself transformed into a stage.</p>
+      <h2>The media idea: turning participation into reach</h2>
+
+      <p>The creative mechanic was simple. The media logic behind it was more interesting: if you make a promotion contingent on a costume, participants don't just redeem an offer — they become living, photographable proof of the activation. Every clown walking into a Burger King was organic social content, a press photograph, and word-of-mouth in motion. The store became a stage.</p>
+
+      <p>The campaign launched on October 24th with a produced branded film referencing both <em>It</em> and <em>Stranger Things</em>, distributed primarily through Burger King's owned channels and targeted press outreach. Out-of-home placements — notably billboards positioned directly in front of McDonald's restaurants — added a pointed visual layer. From there, the earned media ran largely on its own momentum: over 1,100 articles across 40 countries, national coverage on the Today Show and in People and USA Today, and recognition as a top creative work of the year by both AdForum and Adweek.</p>
 
       <p class="section-num">03</p>
-      <h2>POEM done properly</h2>
-      <p>Paid media played a precision role — ignition, not brute-force scale. Seed the idea, then let participation do the multiplying. Owned media stabilized the message through brand social, in-store signage, and local pages. Earned media became the true scale engine, designed into the mechanic from the outset.</p>
+      <h2>How the media model worked</h2>
 
-      <div class="callout-block">
-        <p>Virality is rarely accidental. The most effective earned media is engineered through participation mechanics — situations where the audience's natural behavior produces the content and the reach.</p>
-      </div>
+      <p>The campaign is a textbook illustration of POEM — Paid, Owned, and Earned media — working as an integrated system. Owned channels (brand social, in-store materials, local pages) established the official message and gave press a reliable reference point. Paid media, which included the produced film and out-of-home placements, served as ignition rather than sustained scale. The earned layer — designed into the participation mechanic from the start — did the heavy lifting.</p>
+
+      <p>The result was $22.4 million in media value, generated by a campaign that ran primarily through owned channels and human participation. Production and placement costs were not publicly disclosed, so a precise return figure cannot be stated. But the ratio of earned output to investment was, by any reasonable measure, exceptional — and that efficiency case is what makes this campaign genuinely interesting to planners, not just to creatives.</p>
 
       <p class="section-num">04</p>
-      <h2>Consumer journey design</h2>
+      <h2>The customer journey</h2>
 
       <div class="cdj-grid">
         <div class="cdj-step">
           <p class="cdj-label">Awareness</p>
-          <p class="cdj-desc">Horror styling + seasonal timing + immediate talk value</p>
+          <p class="cdj-desc">Branded film + Halloween timing + strong cultural relevance</p>
         </div>
         <div class="cdj-step">
           <p class="cdj-label">Consideration</p>
-          <p class="cdj-desc">Low-friction incentive — a free Whopper</p>
+          <p class="cdj-desc">Low-friction incentive — a free Whopper for a costume</p>
         </div>
         <div class="cdj-step">
           <p class="cdj-label">Action</p>
-          <p class="cdj-desc">Measurable store visit; online buzz → offline footfall</p>
+          <p class="cdj-desc">Measurable store visit — online buzz converting to offline footfall</p>
         </div>
         <div class="cdj-step">
-          <p class="cdj-label">Advocacy</p>
-          <p class="cdj-desc">Costume participation drives UGC and word of mouth</p>
+          <p class="cdj-label">Participation</p>
+          <p class="cdj-desc">Costume-wearers produce content and press coverage organically</p>
         </div>
       </div>
 
+      <p>The final stage is framed here as participation rather than advocacy in the traditional sense. The 110,000 people who showed up in costume were engaged participants — but participation at a promotional event and sustained brand advocacy are different things. The campaign created a significant media moment and measurable footfall. Whether it shifted brand preference or purchase frequency in the longer term is a question the available data does not answer.</p>
+
       <p class="section-num">05</p>
-      <h2>Media efficiency and competitive semiotics</h2>
-      <p>The core productivity equation is simple: low paid spend + massive earned amplification = exceptional efficiency. When behavior produces content, you're no longer only buying impressions — you're designing them.</p>
-      <p>Burger King didn't need to name a competitor. The clown symbol did the work. This is advanced competitive semiotics: it leverages memory structures, cultural recency, and instant decoding — amplifying memorability without a single explicit comparison.</p>
+      <h2>The competitive dimension</h2>
+
+      <p>Burger King did not need to name McDonald's. The clown costume was the message. This is the clearest expression of the campaign's strategic elegance: it used a universally understood cultural symbol to make a competitive point without a single explicit comparative claim. The decoding required no effort — which is precisely why it spread. Burger King had spent years building an irreverent, anti-establishment brand identity; this was the sharpest single execution of that positioning in memory.</p>
+
+      <p>It is also worth being honest about the conditions that made this possible. Burger King's underdog position — considerably smaller than McDonald's by restaurant count and market share — gave the joke its charge. An attack from a position of strength reads differently. And the convergence of the 2016 clown panic, the <em>It</em> release, and Halloween in the same window is not a circumstance that repeats. The lesson is not "do this" — it is "be ready and organised enough to move when culture offers you the moment."</p>
 
       <hr class="rule-strong" />
 
-      <p class="section-num">What marketers should learn</p>
-      <h2>Five principles</h2>
+      <p class="section-num">What this actually teaches</p>
+      <h2>Four honest takeaways</h2>
 
       <ul class="insight-list">
         <li>
           <span class="insight-num">01</span>
-          <span><span class="insight-label">Timing beats budget.</span> Cultural timing can outperform heavy media spend.</span>
+          <span><span class="insight-label">Cultural timing is a strategic variable, not a lucky accident.</span> The campaign did not create the cultural moment — it identified one already in motion and moved at the right speed. That requires active social listening, clear brand positioning, and the organisational agility to act on an insight before it expires.</span>
         </li>
         <li>
           <span class="insight-num">02</span>
-          <span><span class="insight-label">Earned is designed.</span> Virality is engineered through participation mechanics, not hoped for.</span>
+          <span><span class="insight-label">Earned media is designed, not stumbled into.</span> The participation mechanic was engineered so that natural human behaviour — dressing up, photographing, sharing — would do the media work. The virality here was a structural outcome of the mechanic's design, not a fortunate side effect.</span>
         </li>
         <li>
           <span class="insight-num">03</span>
-          <span><span class="insight-label">Behavior can be media.</span> The costume mechanic converts human action into reach.</span>
+          <span><span class="insight-label">Competitive symbolism can outperform direct comparison.</span> A Halloween costume made a more memorable competitive point than months of comparative advertising would have. The symbol worked because it was already lodged in the audience's heads — the campaign simply activated it.</span>
         </li>
         <li>
           <span class="insight-num">04</span>
-          <span><span class="insight-label">Rivalry is an asset.</span> Symbolism multiplies memorability when used with precision.</span>
-        </li>
-        <li>
-          <span class="insight-num">05</span>
-          <span><span class="insight-label">Fame and footfall together</span> is rare excellence — this campaign delivered both.</span>
+          <span><span class="insight-label">Treat the principles as transferable, not the tactics.</span> The specific mechanic worked because of a unique competitive situation and a rare cultural alignment. The underlying logic — find the tension already present in culture, design for participation, use owned channels to anchor earned reach — travels further than the clown costume does.</span>
         </li>
       </ul>
 
       <hr class="rule" />
 
       <div class="reference-card">
-        <h3>Media planning reference</h3>
+        <h3>Terms used in this article</h3>
         <div class="term-row">
           <span class="term-name">POEM</span>
-          <span class="term-def">Paid (buy), Owned (control), Earned (persuade others to spread).</span>
+          <span class="term-def">Paid, Owned, Earned media — a framework for understanding how different media types contribute to a campaign. Paid buys reach; Owned controls the message; Earned multiplies both.</span>
         </div>
         <div class="term-row">
-          <span class="term-name">ESOV</span>
-          <span class="term-def">Excess Share of Voice = SOV − SOM. Positive ESOV often supports growth over time.</span>
-        </div>
-        <div class="term-row">
-          <span class="term-name">ROMI</span>
-          <span class="term-def">(Incremental Profit − Marketing Cost) ÷ Marketing Cost.</span>
+          <span class="term-name">Earned media</span>
+          <span class="term-def">Coverage, shares, and mentions generated by others rather than paid for — in this case, press articles, social posts, and content produced by the 110,000 participating costume-wearers.</span>
         </div>
         <div class="term-row">
           <span class="term-name">CDJ</span>
-          <span class="term-def">Awareness → Consideration → Action → Advocacy.</span>
+          <span class="term-def">Consumer Decision Journey — the path from awareness through consideration and action. A planning framework for mapping where a campaign needs to do its work.</span>
         </div>
         <div class="term-row">
-          <span class="term-name">CPM</span>
-          <span class="term-def">Cost ÷ (Impressions ÷ 1,000). Earned drives near-organic economics at the margin.</span>
+          <span class="term-name">UGC</span>
+          <span class="term-def">User-generated content — photos, videos, and posts created by the public rather than the brand. The costume mechanic generated UGC at scale with no direct production cost to Burger King.</span>
+        </div>
+        <div class="term-row">
+          <span class="term-name">QSR</span>
+          <span class="term-def">Quick Service Restaurant — the industry category for fast food chains. A high-frequency, highly competitive category in which share of cultural attention matters as much as share of media spend.</span>
         </div>
       </div>
 
       <p class="closing-note">
-        "Scary Clown Night" is not merely a Halloween campaign. It is a masterclass in cultural insight, IMC orchestration, customer-journey design, and earned media economics. The best campaigns do not buy attention. They design situations that generate it.
+        Scary Clown Night is remembered as a clever Halloween stunt. Looked at more carefully, it is a case study in the relationship between cultural intelligence and media efficiency — how a brand with clear positioning, a sharp creative partner, and the right timing can generate media value far beyond what a paid budget alone could achieve. The best campaigns do not buy attention. They design situations that make attention inevitable.
       </p>
 
     </div>
