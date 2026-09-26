@@ -38,6 +38,7 @@ body {
     line-height: 1;
 }
 
+
 /* ---------- ARTICLE GRID ---------- */
 
 .article-grid {
@@ -45,17 +46,24 @@ body {
     margin: 40px auto 100px;
 
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    /* Two fixed-size cards on desktop */
+    grid-template-columns: repeat(2, 520px);
+
     gap: 36px;
 
+    justify-content: center;
     align-items: stretch;
 }
 
-/* When there is only one article, center it */
+
+/* When there is only one article,
+   keep the exact same card size and center it */
+
 .article-grid:has(.article-card:only-child) {
-    grid-template-columns: minmax(320px, 560px);
-    justify-content: center;
+    grid-template-columns: 520px;
 }
+
 
 /* ---------- CARD ---------- */
 
@@ -63,10 +71,11 @@ body {
     display: flex;
     flex-direction: column;
 
-    width: 100%;
-    height: 100%;
+    width: 520px;
+    height: 520px;
 
     background: #ffffff;
+
     border-radius: 28px;
     overflow: hidden;
 
@@ -80,49 +89,82 @@ body {
         box-shadow 0.35s ease;
 }
 
+
 .article-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 22px 55px rgba(17, 24, 39, 0.12);
+
+    box-shadow:
+        0 22px 55px rgba(17, 24, 39, 0.12);
 }
+
 
 /* ---------- IMAGE ---------- */
 
 .article-card-image {
     width: 100%;
-    aspect-ratio: 16 / 10;
+
+    height: 325px;
 
     object-fit: cover;
+
     display: block;
 }
+
 
 /* ---------- CARD CONTENT ---------- */
 
 .article-card-content {
     display: flex;
     flex-direction: column;
+
     flex: 1;
 
     padding: 30px 30px 32px;
 }
 
+
 .article-card-title {
     font-family: 'Playfair Display', serif;
+
     font-size: 30px;
+
     font-weight: 700;
+
     line-height: 1.15;
 
     margin-bottom: 12px;
 }
 
+
 .article-card-description {
     font-size: 16px;
+
     line-height: 1.65;
+
     color: #637083;
 
     max-width: 520px;
 }
 
+
 /* ---------- MOBILE ---------- */
+
+@media (max-width: 1100px) {
+
+    .article-grid {
+        width: 90%;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 520px));
+    }
+
+    .article-card {
+        width: 100%;
+    }
+}
+
+
+/* ---------- SMALL TABLETS / PHONES ---------- */
 
 @media (max-width: 700px) {
 
@@ -134,44 +176,118 @@ body {
         font-size: 46px;
     }
 
+
     .article-grid {
+
         width: 88%;
+
         grid-template-columns: 1fr;
+
         gap: 28px;
+
         margin-top: 25px;
     }
+
 
     .article-grid:has(.article-card:only-child) {
         grid-template-columns: 1fr;
     }
 
+
+    .article-card {
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+    }
+
+
+    .article-card-image {
+
+        height: auto;
+
+        aspect-ratio: 16 / 10;
+    }
+
+
     .article-card-content {
+
         padding: 25px;
     }
 
+
     .article-card-title {
+
         font-size: 27px;
     }
 
+
     .article-card-description {
+
         font-size: 15px;
     }
+
+}
+
+
+/* ---------- VERY SMALL PHONES ---------- */
+
+@media (max-width: 400px) {
+
+    .page-header h1 {
+        font-size: 40px;
+    }
+
+    .article-grid {
+        width: 90%;
+    }
+
+    .article-card-content {
+        padding: 22px;
+    }
+
+    .article-card-title {
+        font-size: 25px;
+    }
+
 }
 
 </style>
 </head>
 
+
 <body>
 
+
+<!-- ==============================
+     PAGE HEADER
+     ============================== -->
+
 <header class="page-header">
+
     <h1>Brand Strategies</h1>
+
 </header>
+
+
+
+<!-- ==============================
+     ARTICLE GRID
+     ============================== -->
 
 <main class="article-grid">
 
-    <!-- RED BULL -->
 
-    <a class="article-card" href="red-bull/">
+    <!-- ==========================
+         RED BULL
+         ========================== -->
+
+    <a
+        class="article-card"
+        href="red-bull/"
+    >
 
         <img
             class="article-card-image"
@@ -179,11 +295,13 @@ body {
             alt="Red Bull"
         >
 
+
         <div class="article-card-content">
 
             <h2 class="article-card-title">
                 Red Bull
             </h2>
+
 
             <p class="article-card-description">
                 A strategic breakdown of category creation and cultural ownership.
@@ -193,7 +311,9 @@ body {
 
     </a>
 
+
 </main>
+
 
 </body>
 </html>
