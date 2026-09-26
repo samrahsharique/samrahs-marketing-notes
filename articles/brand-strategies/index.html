@@ -23,148 +23,176 @@ body {
     min-height: 100vh;
 }
 
-/* ---------- HEADER ---------- */
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
 
 .page-header {
     text-align: center;
-    padding: 70px 24px 45px;
+    padding: 65px 24px 40px;
 }
 
 .page-header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(48px, 6vw, 72px);
+    font-size: clamp(48px, 5vw, 68px);
     font-weight: 700;
     letter-spacing: -0.035em;
     line-height: 1;
 }
 
 
-/* ---------- ARTICLE GRID ---------- */
+/* =========================================
+   ARTICLE GRID
+   ========================================= */
 
 .article-grid {
-    width: min(1080px, 88%);
-    margin: 40px auto 100px;
+    width: 100%;
+    max-width: 960px;
+
+    margin: 45px auto 100px;
+
+    padding: 0 20px;
 
     display: grid;
 
-    /* Two fixed-size cards on desktop */
-    grid-template-columns: repeat(2, 520px);
+    grid-template-columns: repeat(2, 440px);
 
-    gap: 36px;
+    gap: 34px;
 
     justify-content: center;
-    align-items: stretch;
+
+    align-items: start;
 }
 
 
-/* When there is only one article,
-   keep the exact same card size and center it */
+/* =========================================
+   SINGLE ARTICLE
+   Same exact card size
+   ========================================= */
 
 .article-grid:has(.article-card:only-child) {
-    grid-template-columns: 520px;
+    grid-template-columns: 440px;
 }
 
 
-/* ---------- CARD ---------- */
+/* =========================================
+   ARTICLE CARD
+   ========================================= */
 
 .article-card {
     display: flex;
     flex-direction: column;
 
-    width: 520px;
-    height: 520px;
+    width: 440px;
+    height: 470px;
 
     background: #ffffff;
 
-    border-radius: 28px;
+    border-radius: 25px;
+
     overflow: hidden;
 
     text-decoration: none;
+
     color: inherit;
 
-    box-shadow: 0 14px 40px rgba(17, 24, 39, 0.07);
+    box-shadow:
+        0 12px 35px rgba(17, 24, 39, 0.07);
 
     transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
 .article-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 
     box-shadow:
-        0 22px 55px rgba(17, 24, 39, 0.12);
+        0 20px 45px rgba(17, 24, 39, 0.11);
 }
 
 
-/* ---------- IMAGE ---------- */
+/* =========================================
+   CARD IMAGE
+   ========================================= */
 
 .article-card-image {
     width: 100%;
 
-    height: 325px;
+    height: 275px;
 
     object-fit: cover;
 
     display: block;
+
+    flex-shrink: 0;
 }
 
 
-/* ---------- CARD CONTENT ---------- */
+/* =========================================
+   CARD CONTENT
+   ========================================= */
 
 .article-card-content {
+    padding: 27px 30px 30px;
+
     display: flex;
+
     flex-direction: column;
 
     flex: 1;
-
-    padding: 30px 30px 32px;
 }
 
 
 .article-card-title {
     font-family: 'Playfair Display', serif;
 
-    font-size: 30px;
+    font-size: 29px;
 
     font-weight: 700;
 
     line-height: 1.15;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 
 .article-card-description {
-    font-size: 16px;
+    font-size: 15px;
 
-    line-height: 1.65;
+    line-height: 1.6;
 
     color: #637083;
 
-    max-width: 520px;
+    max-width: 380px;
 }
 
 
-/* ---------- MOBILE ---------- */
+/* =========================================
+   TABLET
+   ========================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
 
     .article-grid {
-        width: 90%;
-
         grid-template-columns:
-            repeat(2, minmax(0, 520px));
+            repeat(2, minmax(0, 440px));
+
+        max-width: 940px;
     }
 
     .article-card {
         width: 100%;
     }
+
 }
 
 
-/* ---------- SMALL TABLETS / PHONES ---------- */
+/* =========================================
+   MOBILE
+   ========================================= */
 
 @media (max-width: 700px) {
 
@@ -179,13 +207,15 @@ body {
 
     .article-grid {
 
-        width: 88%;
+        width: 100%;
+
+        padding: 0 22px;
+
+        margin-top: 25px;
 
         grid-template-columns: 1fr;
 
         gap: 28px;
-
-        margin-top: 25px;
     }
 
 
@@ -214,7 +244,7 @@ body {
 
     .article-card-content {
 
-        padding: 25px;
+        padding: 24px 25px 27px;
     }
 
 
@@ -232,7 +262,9 @@ body {
 }
 
 
-/* ---------- VERY SMALL PHONES ---------- */
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
 
 @media (max-width: 400px) {
 
@@ -241,15 +273,7 @@ body {
     }
 
     .article-grid {
-        width: 90%;
-    }
-
-    .article-card-content {
-        padding: 22px;
-    }
-
-    .article-card-title {
-        font-size: 25px;
+        padding: 0 18px;
     }
 
 }
@@ -261,10 +285,6 @@ body {
 <body>
 
 
-<!-- ==============================
-     PAGE HEADER
-     ============================== -->
-
 <header class="page-header">
 
     <h1>Brand Strategies</h1>
@@ -272,17 +292,10 @@ body {
 </header>
 
 
-
-<!-- ==============================
-     ARTICLE GRID
-     ============================== -->
-
 <main class="article-grid">
 
 
-    <!-- ==========================
-         RED BULL
-         ========================== -->
+    <!-- RED BULL -->
 
     <a
         class="article-card"
@@ -301,7 +314,6 @@ body {
             <h2 class="article-card-title">
                 Red Bull
             </h2>
-
 
             <p class="article-card-description">
                 A strategic breakdown of category creation and cultural ownership.
