@@ -1,95 +1,199 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brand Strategies | Samrah’s Marketing Notes</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<title>Brand Strategies | Samrah's Marketing Notes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
-  font-family:Inter, sans-serif;
-  background:#f7f7f9;
-  color:#111827;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.container{
-  max-width:1200px;
-  margin:60px auto;
-  padding:0 24px;
+body {
+    background: #f7f7f9;
+    color: #111827;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
 }
 
-h1{
-  font-family:"Playfair Display", serif;
-  font-size:56px;
-  margin-bottom:60px;
-  text-align:center;
+/* ---------- HEADER ---------- */
+
+.page-header {
+    text-align: center;
+    padding: 70px 24px 45px;
 }
 
-.grid{
-  display:flex;
-  justify-content:center;
-  align-items:center;
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 72px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1;
 }
 
-.tile{
-  background:white;
-  border-radius:22px;
-  overflow:hidden;
-  text-decoration:none;
-  color:inherit;
-  box-shadow:0 10px 30px rgba(0,0,0,.06);
-  transition:all .25s ease;
-  width:410px;
+/* ---------- ARTICLE GRID ---------- */
+
+.article-grid {
+    width: min(1080px, 88%);
+    margin: 40px auto 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px;
+
+    align-items: stretch;
 }
 
-.tile:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 40px rgba(0,0,0,.12);
+/* When there is only one article, center it */
+.article-grid:has(.article-card:only-child) {
+    grid-template-columns: minmax(320px, 560px);
+    justify-content: center;
 }
 
-.tile img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  display:block;
+/* ---------- CARD ---------- */
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+
+    text-decoration: none;
+    color: inherit;
+
+    box-shadow: 0 14px 40px rgba(17, 24, 39, 0.07);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
-.content{
-  padding:22px;
+.article-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 55px rgba(17, 24, 39, 0.12);
 }
 
-.content h2{
-  font-family:"Playfair Display", serif;
-  font-size:28px;
-  margin:0 0 10px;
+/* ---------- IMAGE ---------- */
+
+.article-card-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+    display: block;
 }
 
-.content p{
-  color:#6b7280;
-  margin:0;
-  line-height:1.5;
+/* ---------- CARD CONTENT ---------- */
+
+.article-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 30px 30px 32px;
 }
+
+.article-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.15;
+
+    margin-bottom: 12px;
+}
+
+.article-card-description {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #637083;
+
+    max-width: 520px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .page-header {
+        padding: 48px 20px 28px;
+    }
+
+    .page-header h1 {
+        font-size: 46px;
+    }
+
+    .article-grid {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 25px;
+    }
+
+    .article-grid:has(.article-card:only-child) {
+        grid-template-columns: 1fr;
+    }
+
+    .article-card-content {
+        padding: 25px;
+    }
+
+    .article-card-title {
+        font-size: 27px;
+    }
+
+    .article-card-description {
+        font-size: 15px;
+    }
+}
+
 </style>
-
 </head>
 
 <body>
-<div class="container">
-  <h1>Brand Strategies</h1>
 
-  <div class="grid">
-    <a class="tile" href="red-bull/">
-      <img src="red-bull/assets/red-bull2.jpg" alt="Red Bull">
-      <div class="content">
-        <h2>Red Bull</h2>
-        <p>A strategic breakdown of category creation and cultural ownership.</p>
-      </div>
+<header class="page-header">
+    <h1>Brand Strategies</h1>
+</header>
+
+<main class="article-grid">
+
+    <!-- RED BULL -->
+
+    <a class="article-card" href="red-bull/">
+
+        <img
+            class="article-card-image"
+            src="red-bull/assets/red-bull2.jpg"
+            alt="Red Bull"
+        >
+
+        <div class="article-card-content">
+
+            <h2 class="article-card-title">
+                Red Bull
+            </h2>
+
+            <p class="article-card-description">
+                A strategic breakdown of category creation and cultural ownership.
+            </p>
+
+        </div>
+
     </a>
-  </div>
-</div>
+
+</main>
+
 </body>
 </html>
