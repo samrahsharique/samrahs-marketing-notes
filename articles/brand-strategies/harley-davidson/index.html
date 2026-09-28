@@ -1091,12 +1091,22 @@ footer{
   }
 
   .insight-left{
-    position:sticky;
-    top:75px;
+    position:relative;
+  top:auto;
+  display:flex;
+  align-items:baseline;
+  gap:18px;
+  margin-bottom:20px;
   }
 
   .insight-number{
     font-size:65px;
+    line-height:.8;
+  }
+  
+  .insight-label{
+  margin-top:0;
+  max-width:none;
   }
 
   h2{
