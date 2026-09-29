@@ -1,1 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Just Undo It? Nike and the Most Expensive Lesson in Channel Strategy | Samrah's Marketing Notes</title>
+<meta name="description" content="A $35 logo, a $126 million shoe, and a stock that just fell to a 12-year low">
 
+<style>
+*,
+*::before,
+*::after {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root {
+  --black:#050505;
+  --white:#ffffff;
+  --volt:#D8FF00;
+  --paper:#f4f4f1;
+  --soft:#e4e4df;
+  --mid:#70706b;
+  --dark-mid:#343432;
+  --red:#ff2b2b;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+  background:var(--white);
+  color:var(--black);
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:16px;
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+
+a { color:inherit; }
+
+nav {
+  position:fixed;
+  inset:0 0 auto 0;
+  height:64px;
+  z-index:100;
+  padding:0 42px;
+  background:rgba(255,255,255,.94);
+  border-bottom:1px solid #d5d5d0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  backdrop-filter:blur(12px);
+}
+
+.nav-brand {
+  text-decoration:none;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
+.nav-tag {
+  border:1px solid var(--black);
+  padding:7px 11px 6px;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+
+.hero {
+  min-height:100vh;
+  padding-top:64px;
+  display:grid;
+  grid-template-columns:minmax(0,1.3fr) minmax(320px,.7fr);
+  background:var(--black);
+  color:var(--white);
+  overflow:hidden;
+  position:relative;
+}
+
+.hero::before {
+  display:none;
+  content:"";
+  position:absolute;
+  width:72vw;
+  height:24vw;
+  min-height:190px;
+  max-height:350px;
+  right:-18vw;
+  bottom:11vh;
+  background:var(--volt);
+  transform:rotate(-8deg) skewX(-18deg);
+  border-radius:50%;
+  opacity:.98;
+}
+
+.hero-left {
+  min-height:calc(100vh - 64px);
+  padding:90px 70px 72px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:40px;
+  border-right:1px solid #333;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:26px;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+}
+
+.eyebrow::before {
+  content:"";
+  width:30px;
+  height:3px;
+  background:var(--volt);
+  transform:skewX(-28deg);
+}
+
+.hero-swoosh {
+  width:clamp(150px,22vw,330px);
+  height:auto;
+  margin-bottom:0;
+  display:block;
+  fill:var(--volt);
+}
+
+.hero-title {
+  max-width:1050px;
+  font-size:clamp(54px,7.4vw,116px);
+  line-height:.88;
+  font-weight:900;
+  letter-spacing:-.075em;
+  text-transform:uppercase;
+}
+
+.hero-title .accent {
+  color:var(--volt);
+  font-style:italic;
+}
+
+.hero-right {
+  min-height:calc(100vh - 64px);
+  padding:90px 48px 72px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  z-index:2;
+  overflow:hidden;
+}
+
+.hero-right::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:27%;
+  right:-32%;
+  width:135%;
+  height:26%;
+  min-height:170px;
+  max-height:300px;
+  background:var(--volt);
+  transform:rotate(-8deg) skewX(-18deg);
+  border-radius:50%;
+}
+
+.hero-panel {
+  position:relative;
+  padding:28px 22px 24px;
+  background:var(--black);
+}
+
+.hero-kicker {
+  color:#aaa;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.hero-subtitle {
+  max-width:430px;
+  margin-bottom:42px;
+  font-size:17px;
+  line-height:1.7;
+  font-weight:400;
+}
+
+.hero-stats {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid #555;
+  border-bottom:1px solid #555;
+}
+
+.hero-stat {
+  padding:20px 12px 18px;
+  border-right:1px solid #555;
+}
+
+.hero-stat:last-child { border-right:0; }
+
+.hero-stat-num {
+  color:var(--volt);
+  font-size:clamp(20px,2vw,28px);
+  font-weight:900;
+  letter-spacing:-.06em;
+}
+
+.hero-stat-label {
+  margin-top:7px;
+  color:#aaa;
+  font-size:8px;
+  line-height:1.4;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.hero-meta {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:22px;
+  color:#999;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.page {
+  max-width:1220px;
+  margin:auto;
+  padding:0 52px;
+}
+
+.intro {
+  padding:112px 0 105px;
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:100px;
+  border-bottom:1px solid var(--black);
+}
+
+.section-index {
+  color:#c8c8c3;
+  font-size:92px;
+  line-height:.82;
+  font-weight:900;
+  letter-spacing:-.09em;
+}
+
+.section-label {
+  margin-top:22px;
+  color:var(--mid);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.intro h2 {
+  max-width:850px;
+  margin-bottom:28px;
+  font-size:clamp(32px,4vw,58px);
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+}
+
+p {
+  color:#30302e;
+  margin-bottom:23px;
+}
+
+p:last-child { margin-bottom:0; }
+
+.stat-band {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:var(--black);
+  color:var(--white);
+}
+
+.stat-band .stat {
+  padding:38px 28px 34px;
+  border-right:1px solid #363636;
+}
+
+.stat-band .stat:last-child { border-right:0; }
+
+.stat strong {
+  display:block;
+  color:var(--volt);
+  font-size:38px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:-.06em;
+}
+
+.stat span {
+  display:block;
+  margin-top:10px;
+  color:#aaa;
+  font-size:9px;
+  line-height:1.45;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+.chapter {
+  padding:105px 0;
+  display:grid;
+  grid-template-columns:240px minmax(0,1fr);
+  gap:90px;
+  border-bottom:1px solid var(--soft);
+}
+
+.intro > div:first-child,
+.chapter > div:first-child {
+  position:sticky;
+  top:104px;
+  align-self:start;
+}
+
+.chapter-number {
+  color:#d1d1cc;
+  font-size:76px;
+  line-height:.8;
+  font-weight:900;
+  letter-spacing:-.09em;
+}
+
+.chapter-side {
+  margin-top:18px;
+  color:var(--mid);
+  font-size:9px;
+  font-weight:800;
+  line-height:1.45;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+
+.chapter h2 {
+  max-width:850px;
+  margin-bottom:30px;
+  font-size:clamp(29px,3.4vw,48px);
+  line-height:1.02;
+  font-weight:850;
+  letter-spacing:-.05em;
+  text-transform:uppercase;
+}
+
+.chapter h3 {
+  margin:48px 0 18px;
+  font-size:18px;
+  font-weight:850;
+  letter-spacing:-.02em;
+  text-transform:uppercase;
+}
+
+.chapter h3:first-child { margin-top:0; }
+
+.lead {
+  font-size:18px;
+  line-height:1.8;
+}
+
+.callout {
+  margin:42px 0;
+  padding:31px 34px;
+  background:var(--black);
+  color:var(--white);
+  position:relative;
+  overflow:hidden;
+}
+
+.callout::after {
+  content:"";
+  position:absolute;
+  width:180px;
+  height:50px;
+  right:-50px;
+  bottom:-20px;
+  background:var(--volt);
+  transform:rotate(-10deg) skewX(-20deg);
+  border-radius:50%;
+}
+
+.callout-label {
+  margin-bottom:13px;
+  color:var(--volt);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.callout p {
+  max-width:800px;
+  color:#f4f4f4;
+  font-size:17px;
+}
+
+.bullets {
+  margin:28px 0 34px;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  border-top:1px solid var(--black);
+}
+
+.bullet {
+  display:grid;
+  grid-template-columns:28px 1fr;
+  gap:16px;
+  padding:19px 0;
+  border-bottom:1px solid var(--soft);
+}
+
+.bullet::before {
+  content:"";
+  width:11px;
+  height:11px;
+  margin-top:8px;
+  background:var(--volt);
+  transform:skewX(-22deg) rotate(-8deg);
+}
+
+.bullet p {
+  margin:0;
+}
+
+.identity-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin:38px 0;
+  border-top:1px solid var(--black);
+  border-left:1px solid var(--black);
+}
+
+.identity-card {
+  padding:28px 24px;
+  border-right:1px solid var(--black);
+  border-bottom:1px solid var(--black);
+}
+
+.identity-card .small {
+  margin-bottom:11px;
+  color:var(--mid);
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.identity-card h4 {
+  margin-bottom:9px;
+  font-size:19px;
+  line-height:1.1;
+  font-weight:850;
+  letter-spacing:-.03em;
+}
+
+.identity-card p {
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.formula-stack {
+  margin:35px 0;
+  border-top:1px solid var(--black);
+  border-bottom:1px solid var(--black);
+}
+
+.formula {
+  padding:23px 0;
+  border-bottom:1px solid var(--soft);
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:17px;
+  line-height:1.65;
+}
+
+.formula:last-child { border-bottom:0; }
+
+.formula-label {
+  display:block;
+  margin-bottom:7px;
+  color:var(--mid);
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.quote {
+  margin:50px 0;
+  padding:44px 0 44px 34px;
+  border-left:7px solid var(--volt);
+}
+
+.quote p {
+  max-width:780px;
+  font-size:28px;
+  line-height:1.25;
+  font-weight:800;
+  letter-spacing:-.04em;
+}
+
+.crisis {
+  margin:35px 0;
+  padding:34px;
+  background:var(--paper);
+  border-top:5px solid var(--black);
+}
+
+.crisis h4 {
+  margin-bottom:13px;
+  font-size:21px;
+  font-weight:850;
+  letter-spacing:-.03em;
+  text-transform:uppercase;
+}
+
+.crisis p {
+  font-size:15px;
+}
+
+.comparison {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  margin:40px 0;
+  border:1px solid var(--black);
+}
+
+.comparison-card {
+  padding:30px;
+}
+
+.comparison-card:first-child {
+  border-right:1px solid var(--black);
+}
+
+.comparison-card.dark {
+  background:var(--black);
+  color:var(--white);
+}
+
+.comparison-card.dark h4 {
+  color:var(--white);
+}
+
+.comparison-card.dark p {
+  color:#d7d7d7;
+}
+
+.comparison-card h4 {
+  margin-bottom:15px;
+  font-size:20px;
+  font-weight:850;
+  text-transform:uppercase;
+}
+
+.comparison-card p {
+  margin:0;
+  font-size:14px;
+}
+
+.framework {
+  margin:38px 0;
+}
+
+.framework-row {
+  display:grid;
+  grid-template-columns:70px 1fr;
+  padding:25px 0;
+  border-top:1px solid var(--soft);
+}
+
+.framework-row:last-child { border-bottom:1px solid var(--soft); }
+
+.framework-letter {
+  color:var(--volt);
+  background:var(--black);
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  transform:skewX(-8deg);
+}
+
+.framework-row h4 {
+  margin-bottom:7px;
+  font-size:17px;
+  font-weight:850;
+}
+
+.framework-row p {
+  margin:0;
+  font-size:14px;
+}
+
+.cheat {
+  margin-top:40px;
+  border:1px solid var(--black);
+  overflow:hidden;
+}
+
+.cheat-header,
+.cheat-row {
+  display:grid;
+  grid-template-columns:1.05fr 1fr 1.35fr;
+}
+
+.cheat-header {
+  background:var(--black);
+  color:var(--white);
+}
+
+.cheat-header div,
+.cheat-row div {
+  padding:15px 17px;
+  border-right:1px solid var(--soft);
+}
+
+.cheat-header div:last-child,
+.cheat-row div:last-child {
+  border-right:0;
+}
+
+.cheat-header div {
+  color:var(--volt);
+  font-size:8px;
+  line-height:1.3;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.cheat-row {
+  border-top:1px solid var(--soft);
+}
+
+.cheat-row:nth-child(even) { background:var(--paper); }
+
+.cheat-row div {
+  color:#3b3b38;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.cheat-row div:first-child {
+  color:var(--black);
+  font-weight:750;
+}
+
+.discussion {
+  display:flex;
+  flex-direction:column;
+  margin-top:35px;
+  border-top:1px solid var(--black);
+}
+
+.question {
+  display:grid;
+  grid-template-columns:54px 1fr;
+  padding:22px 0;
+  border-bottom:1px solid var(--soft);
+}
+
+.question-num {
+  color:var(--black);
+  font-size:22px;
+  font-weight:900;
+}
+
+.question p {
+  margin:0;
+  font-size:16px;
+}
+
+.closing {
+  padding:105px 0 125px;
+}
+
+.closing h2 {
+  max-width:800px;
+  margin-bottom:34px;
+  font-size:clamp(34px,5vw,70px);
+  line-height:.95;
+  font-weight:900;
+  letter-spacing:-.065em;
+  text-transform:uppercase;
+}
+
+.closing p {
+  max-width:820px;
+  font-size:17px;
+}
+
+footer {
+  padding:38px 44px;
+  background:var(--black);
+  color:var(--white);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+}
+
+.footer-brand {
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+.footer-mark {
+  width:80px;
+  height:18px;
+  border-bottom:6px solid var(--volt);
+  transform:skewX(-24deg);
+}
+
+@media(max-width:900px) {
+  nav { padding:0 20px; }
+  .hero {
+    grid-template-columns:1fr;
+    min-height:auto;
+  }
+  .hero-left {
+    min-height:auto;
+    padding:78px 24px 55px;
+    border-right:0;
+    border-bottom:1px solid #333;
+  }
+  .hero-right {
+    min-height:auto;
+    padding:42px 24px 62px;
+  }
+  .hero-right::before { display:none; }
+  .intro > div:first-child,
+  .chapter > div:first-child { position:static; }
+  .hero::before {
+    display:block;
+    width:100vw;
+    height:31vw;
+    right:-30vw;
+    bottom:24%;
+  }
+  .page { padding:0 24px; }
+  .intro,
+  .chapter {
+    grid-template-columns:1fr;
+    gap:40px;
+    padding:72px 0;
+  }
+  .chapter-number { font-size:62px; }
+  .stat-band { grid-template-columns:repeat(2,1fr); }
+  .stat-band .stat:nth-child(2) { border-right:0; }
+  .stat-band .stat:nth-child(1),
+  .stat-band .stat:nth-child(2) { border-bottom:1px solid #363636; }
+  .identity-grid { grid-template-columns:1fr; }
+  .comparison { grid-template-columns:1fr; }
+  .comparison-card:first-child {
+    border-right:0;
+    border-bottom:1px solid var(--black);
+  }
+}
+
+@media(max-width:600px) {
+  body { font-size:15px; }
+  .nav-tag { display:none; }
+  .hero-left { padding:65px 20px 48px; }
+  .hero-right { padding:36px 20px 50px; }
+  .hero-title { font-size:clamp(50px,14vw,82px); }
+  .hero-stats { grid-template-columns:1fr; }
+  .hero-stat {
+    border-right:0;
+    border-bottom:1px solid #555;
+  }
+  .hero-stat:last-child { border-bottom:0; }
+  .page { padding:0 20px; }
+  .intro,.chapter,.closing { padding:64px 0; }
+  .stat-band { grid-template-columns:1fr; }
+  .stat-band .stat {
+    border-right:0;
+    border-bottom:1px solid #363636;
+  }
+  .stat-band .stat:last-child { border-bottom:0; }
+  .formula { font-size:15px; }
+  .cheat { overflow-x:auto; }
+  .cheat-header,
+  .cheat-row { min-width:720px; }
+  .question { grid-template-columns:40px 1fr; }
+  footer {
+    padding:34px 20px;
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a class="nav-brand" href="../../../index.html">Samrah's Marketing Notes</a>
+  <span class="nav-tag">Brand Strategy</span>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <svg class="hero-swoosh" viewBox="135.5 361.38 1000 356.39" role="img" aria-label="Nike Swoosh" xmlns="http://www.w3.org/2000/svg">
+      <path d="M245.8075 717.62406c-29.79588-1.1837-54.1734-9.3368-73.23459-24.4796-3.63775-2.8928-12.30611-11.5663-15.21427-15.2245-7.72958-9.7193-12.98467-19.1785-16.48977-29.6734-10.7857-32.3061-5.23469-74.6989 15.87753-121.2243 18.0765-39.8316 45.96932-79.3366 94.63252-134.0508 7.16836-8.0511 28.51526-31.5969 28.65302-31.5969.051 0-1.11225 2.0153-2.57652 4.4694-12.65304 21.1938-23.47957 46.158-29.37751 67.7703-9.47448 34.6785-8.33163 64.4387 3.34693 87.5151 8.05611 15.898 21.86731 29.6684 37.3979 37.2806 27.18874 13.3214 66.9948 14.4235 115.60699 3.2245 3.34694-.7755 169.19363-44.801 368.55048-97.8366 199.35686-53.0408 362.49439-96.4029 362.51989-96.3672.056.046-463.16259 198.2599-703.62654 301.0914-38.08158 16.2806-48.26521 20.3928-66.16827 26.6785-45.76525 16.0714-86.76008 23.7398-119.89779 22.4235z"/>
+    </svg>
+
+    <div class="hero-headline">
+      <div class="eyebrow">Nike / Brand Strategy</div>
+      <h1 class="hero-title">Just Undo It?</h1>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-kicker">Samrah's Marketing Notes / Brand Strategy Series</div>
+
+    <div class="hero-panel">
+      <p class="hero-subtitle">A $35 logo, a $126 million shoe, and a stock that just fell to a 12-year low</p>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">$35</div>
+          <div class="hero-stat-label">Swoosh price, 1971</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">$126M</div>
+          <div class="hero-stat-label">Air Jordan first-year sales</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">$36</div>
+          <div class="hero-stat-label">Stock price cited in case</div>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <span>Samrah Sharique</span>
+        <span>/</span>
+        <span>Brand Strategy</span>
+        <span>/</span>
+        <span>2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="page">
+
+<section class="intro">
+  <div>
+    <div class="section-index">00</div>
+    <div class="section-label">The setup</div>
+  </div>
+  <div>
+    <h2>Just Undo It? Nike and the Most Expensive Lesson in Channel Strategy</h2>
+    <p>Start with three numbers:</p>
+    <div class="bullets">
+      <div class="bullet"><p>$35. The price Nike paid a design student for the Swoosh in 1971.</p></div>
+      <div class="bullet"><p>$126 million. First-year sales of Air Jordan, against an internal goal of about $3 million over three years.</p></div>
+      <div class="bullet"><p>$36. Roughly where the stock trades as I write this, near its 52-week low.</p></div>
+    </div>
+    <p>This is a case about how a brand that earned the first two numbers arrived at the third. It is also a live case. Nike reports fiscal Q1 2027 results on October 1, 2026, two days from now, and the ending is deliberately left open. Every framework below is applied to a story still being written.</p>
+    <div class="callout">
+      <div class="callout-label">The thesis</div>
+      <p>Nike is history&#x27;s best example of a brand built on meaning. It nearly forgot that meaning has to be delivered through products, shelves, and stories, not dashboards.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="case-at-a-glance">
+  <div>
+    <div class="chapter-number">01</div>
+    <div class="chapter-side">The case at a glance</div>
+  </div>
+  <div>
+    <h2>1. The case at a glance</h2>
+    <div class="bullets">
+      <div class="bullet"><p>Fiscal 2026 (ended May 31, 2026). Full-year revenues were $46.4 billion, flat on a reported basis and down 2 percent currency-neutral.</p></div><div class="bullet"><p>The channel story. In Q4, wholesale revenues were $6.6 billion, up 1 percent currency-neutral, while NIKE Direct fell 9 percent currency-neutral to $4.1 billion.</p></div><div class="bullet"><p>The geography story. Q4 showed modest North America growth offset by declines in Greater China (-17%), EMEA (-6%) and Converse.</p></div><div class="bullet"><p>The margin story. Full-year gross margin was 42.9%, or 40.8% excluding a benefit from tariff recovery. Read the reported number with care.</p></div><div class="bullet"><p>The cost of repair. Management cited nearly $400 million of severance charges to reposition the business.</p></div><div class="bullet"><p>The brand-value story. Interbrand&#x27;s 2025 ranking has Nike&#x27;s brand value down 25.9% to $33.7 billion, dropping to 23rd place.</p></div><div class="bullet"><p>The market&#x27;s verdict. One analyst notes a 42% decline year to date with shares hovering around $36, close to the 52-week low. Another notes Nike was removed from the S&amp;P 100 earlier in September.</p></div>
+    </div>
+    <p>Hold on to that last group. Now go back to how the brand was built.</p>
+  </div>
+</section>
+
+<div class="stat-band">
+  <div class="stat"><strong>$46.4B</strong><span>FY26 full-year revenue</span></div>
+  <div class="stat"><strong>-9%</strong><span>Q4 NIKE Direct currency-neutral</span></div>
+  <div class="stat"><strong>42.9%</strong><span>FY26 reported gross margin</span></div>
+  <div class="stat"><strong>$33.7B</strong><span>Interbrand 2025 brand value</span></div>
+</div>
+
+<section class="chapter" id="origins">
+  <div>
+    <div class="chapter-number">02</div>
+    <div class="chapter-side">2. Origins: the myth-maker (Holt and McCracken)</div>
+  </div>
+  <div>
+    <h2>the myth-maker (Holt and McCracken)</h2>
+    <p class="lead">Nike began in 1964 as Blue Ribbon Sports. Phil Knight and his former track coach Bill Bowerman formed it to sell Onitsuka Tiger sneakers in the US. In 1971 the company cut ties with Onitsuka and became Nike, using a Swoosh logo bought for $35. The name honors the Greek goddess of victory. That already tells you the brand&#x27;s category: it never sold shoes, it sold winning.</p>
+    <p>Two theories explain what happened next.</p>
+    <p>Douglas Holt&#x27;s cultural branding. Holt argues that iconic brands don&#x27;t win by better benefits. They win by delivering an identity myth that resolves a tension in society. Nike&#x27;s myth, sharpened over decades, is democratized athletic heroism: the belief that greatness is available to anyone willing to struggle. Bowerman&#x27;s line, &quot;if you have a body, you are an athlete,&quot; is the brand&#x27;s mission statement in one sentence.</p>
+    <p>McCracken&#x27;s meaning-transfer model. Meaning flows from the culture at large to a celebrity, then from the celebrity to the product, then from the product to the consumer. Michael Jordan is the textbook case. Nike signed him in 1984 to a $2.5 million, five-year deal with a 5% royalty, and Air Jordan generated $126 million in first-year sales against a $3 million three-year goal. Jordan&#x27;s on-court mythology was moved onto a shoe, and the shoe carried it into bedrooms and streets.</p>
+    <p>&quot;Just Do It&quot; (1988) was the brand&#x27;s myth compressed into three words. The first ad, on July 1, 1988, featured Walt Stack, and Wieden credits the slogan to Gary Gilmore&#x27;s last words, &quot;Let&#x27;s do it.&quot; It is an oddly dark source for a motivational line, which is precisely why it works: it has no product features in it at all. It is pure identity.</p>
+    <div class="quote">
+      <p>Aha: in Holt&#x27;s terms, Nike&#x27;s moat was never the waffle sole. Bowerman invented that by pouring rubber into a waffle iron, and competitors can copy soles. Myths are much harder to copy than features.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="identity">
+  <div>
+    <div class="chapter-number">03</div>
+    <div class="chapter-side">3. Identity and architecture: Aaker&#x27;s lens</div>
+  </div>
+  <div>
+    <h2>Aaker&#x27;s lens</h2>
+    <p>Aaker&#x27;s identity system distinguishes a core identity (timeless essence) from an extended identity (supporting associations). Nike&#x27;s core: authentic athletic performance and inspiration. Its extended identity added rebellion, swagger, and cultural relevance. On Aaker&#x27;s brand-personality dimensions, Nike scores high on excitement (daring, spirited) and competence (reliable, successful).</p>
+    <h3>Architecture. Nike operates a portfolio, not a single brand:</h3>
+    <div class="identity-grid">
+      <div class="identity-card">
+        <div class="small">Master brand</div>
+        <h4>Nike</h4>
+        <p>The parent brand and home of the Swoosh. It carries the core promise of authentic athletic performance and lends credibility to everything beneath it.</p>
+      </div>
+      <div class="identity-card">
+        <div class="small">Sub-brand</div>
+        <h4>Jordan</h4>
+        <p>An athlete-born sub-brand with its own logo (the Jumpman) that behaves almost like an endorsed brand with independent equity.</p>
+      </div>
+      <div class="identity-card">
+        <div class="small">Separate brand</div>
+        <h4>Converse</h4>
+        <p>A separately positioned brand acquired in 2003. In the recent numbers, Converse has been a drag rather than a driver.</p>
+      </div>
+    </div>
+    <p>Jordan is the strategic masterstroke of the architecture. It let Nike build a second identity inside the first, one that could serve style and street culture while Nike proper served performance. That flexibility is also where the trouble later crept in.</p>
+  </div>
+</section>
+
+<section class="chapter" id="equity">
+  <div>
+    <div class="chapter-number">04</div>
+    <div class="chapter-side">4. Equity: Keller&#x27;s pyramid, and where Nike is weakest</div>
+  </div>
+  <div>
+    <h2>Keller&#x27;s pyramid, and where Nike is weakest</h2>
+    <p>Walking up Keller&#x27;s Customer-Based Brand Equity pyramid:</p>
+    <div class="identity-grid">
+      <div class="identity-card"><div class="small">01 / Salience</div><h4>The Swoosh is a textbook distinctive brand asset (Romaniuk and Sharp): recognizable with no name attached.</h4></div><div class="identity-card"><div class="small">02 / Performance</div><h4>Historically strong, but this is where challengers attacked.</h4></div><div class="identity-card"><div class="small">03 / Imagery</div><h4>Athletic, aspirational, urban.</h4></div><div class="identity-card"><div class="small">04 / Judgments</div><h4>Quality, credibility, superiority.</h4></div><div class="identity-card"><div class="small">05 / Feelings</div><h4>Inspiration, belonging, excitement.</h4></div><div class="identity-card"><div class="small">06 / Resonance</div><h4>Deep behavioral loyalty and identification.</h4></div>
+    </div>
+    <p>The measurement puzzle, and the sharpest insight in this case. Two respected valuation shops give what looks like contradictory verdicts:</p>
+    <div class="comparison">
+      <div class="comparison-card">
+        <h4>Interbrand</h4>
+        <p>Interbrand says the brand&#x27;s value fell 25.9% to $33.7 billion. Its methodology ranks brands on financial performance, the role of the brand in purchase intent, and competitive strength.</p>
+      </div>
+      <div class="comparison-card dark">
+        <h4>Brand Finance</h4>
+        <p>Brand Finance, meanwhile, named Nike the strongest apparel brand globally, with a Brand Strength Index score of 94.7 out of 100. Its valuation uses the Royalty Relief approach.</p>
+      </div>
+    </div>
+    <p>These are not in conflict. They measure different things. In stylized form:</p>
+    <div class="formula-stack">
+      <div class="formula"><span class="formula-label">Brand strength</span>Brand strength = how strongly consumers feel and choose (attitudinal).</div>
+      <div class="formula"><span class="formula-label">Brand value</span>Brand value = PV of earnings attributable to the brand (financial).</div>
+      <div class="formula"><span class="formula-label">Interbrand-style</span>Interbrand-style: Value ≈ Σ [ (Economic profit)ₜ × (Role-of-brand index) ] ÷ (1 + r_BS)ᵗ, where the discount rate r_BS falls as brand strength rises.</div>
+      <div class="formula"><span class="formula-label">Royalty-relief</span>Royalty-relief: Value ≈ PV of [ Forecast revenue × Royalty rate × (1 − tax) ]</div>
+    </div>
+    <p>Because both value formulas run through revenue and profit forecasts, a brand can stay strong in consumers&#x27; minds while its value shrinks if its sales and profit outlook deteriorate. Nike&#x27;s attitudes are largely intact. Its commercial conversion is what broke. That sets up the next section.</p>
+  </div>
+</section>
+
+<section class="chapter" id="crises">
+  <div>
+    <div class="chapter-number">05</div>
+    <div class="chapter-side">5. Two crises, two very different outcomes</div>
+  </div>
+  <div>
+    <h2>5. Two crises, two very different outcomes</h2>
+    <div class="crisis">
+      <h4>1998: the sweatshop crisis (image repair)</h4>
+      <p>Activists documented conditions in Nike&#x27;s contract factories from the early 1990s. The scandal is generally dated to a 1991 report by Jeff Ballinger on garment workers at a Nike factory in Indonesia. Nike&#x27;s first instinct was defensive: the company initially treated the accusations as public relations problems before shifting to a proactive approach after serious damage to its reputation. Knight&#x27;s 1998 National Press Club speech conceded that the Nike product had become synonymous with abusive labor practices. A few points worth taking away:</p>
+      <p>This maps onto Benoit&#x27;s Image Repair Theory (denial → mortification/corrective action).</p>
+      <p>It shows the flip side of salience: because Nike was the most visible brand, it became the symbol of an industry-wide problem. Strong brands are lightning rods.</p>
+      <p>Legally, it also produced Kasky v. Nike, a landmark case about whether a company&#x27;s defense of its practices counts as commercial speech.</p>
+      <p>Nike&#x27;s financial slump in 1998 had several causes. Analysts cite the tarnished image, a failure to follow shifting consumer preferences, and the Asian financial crisis. Be careful not to attribute a downturn to a single cause.</p>
+    </div>
+    <div class="crisis">
+      <h4>2018: &quot;Dream Crazy&quot; (brand activism)</h4>
+      <p>Nike made Colin Kaepernick the face of the 30th anniversary of &quot;Just Do It.&quot; The immediate reaction was noisy. Reports say shares dipped roughly 3.2% the morning after, but Edison Trends recorded a 31 percent increase in Nike online orders in the 72 hours after release. The ad won an Emmy for Outstanding Commercial.</p>
+      <p>The right framework is segmentation and polarization, not &quot;controversy sells.&quot; A stylized payoff:</p>
+      <div class="formula-stack">
+        <div class="formula">Net brand effect = Σᵢ (segment share × strategic weight × sentiment shift)</div>
+      </div>
+      <p>The boycott segment (older, lower Nike involvement) mattered less than the core growth segment (younger, urban, higher lifetime value), whose sentiment moved up. Holt would say Nike did not chase a stunt. It aligned with a live cultural tension that its own myth already implied: believing in something is the point of the whole brand.</p>
+      <p>A caution. Scholars have also criticized the campaign as inconsistent with Nike&#x27;s own labor history and corporate conduct, so authenticity is a contested word in this case. A strong analysis can note that brand activism creates an authenticity liability: the audience will audit the company&#x27;s behavior against its stance.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="channel">
+  <div>
+    <div class="chapter-number">06</div>
+    <div class="chapter-side">6. The pivot that cracked the moat: &quot;Consumer Direct Acceleration&quot;</div>
+  </div>
+  <div>
+    <h2>6. The pivot that cracked the moat: &quot;Consumer Direct Acceleration&quot;</h2>
+    <div class="callout">
+      <div class="callout-label">Core diagnosis</div>
+      <p>Here is the core strategic error, and it is a channel error, not a brand error.</p>
+    </div>
+    <p>Under CEO John Donahoe, Nike accelerated its direct-to-consumer model. It left Amazon in 2019 and de-emphasized wholesale partners. It is a seductive idea: capture the retailer&#x27;s margin, own the customer data, control the story. Look at what actually happened:</p>
+    <div class="bullets">
+      <div class="bullet"><p>Nike relied too heavily on DTC sales during the pandemic and shunned longtime wholesale partners such as Foot Locker, which then filled their walls with other brands.</p></div><div class="bullet"><p>As customers returned to stores, they bought sneakers from running brands like On and Hoka, and Asics and New Balance for lifestyle wear.</p></div><div class="bullet"><p>Nike had leaned heavily on high-volume retro sneakers like the Air Force 1 and Dunk, and the market became oversaturated.</p></div><div class="bullet"><p>Nike&#x27;s own leadership later admitted the plan added &quot;complexity and inefficiency,&quot; and a Wall Street analyst summarized the flaw in one line: by accelerating, the company focused on where it was selling and lost focus on what it was selling.</p></div>
+    </div>
+    <h3>Three frameworks that explain the damage</h3>
+    <div class="framework">
+      <div class="framework-row">
+        <div class="framework-letter">A</div>
+        <div><h4>Byron Sharp: mental and physical availability</h4><p>mental and physical availability. Ehrenberg-Bass research argues brands grow by maximizing reach (penetration) through being easy to notice (mental availability) and easy to buy (physical availability). Nike voluntarily cut its physical availability. Competitors moved onto the shelf space it vacated. In the long run, the Double Jeopardy law says smaller-penetration brands also see slightly lower loyalty, so losing reach hurts twice.</p></div>
+      </div>
+      <div class="framework-row">
+        <div class="framework-letter">B</div>
+        <div><h4>The unit-economics trap</h4><p>Suppose a shoe retails at $100, wholesales at $50, and costs $25 to make.</p></div>
+      </div>
+      <div class="formula-stack">
+        <div class="formula">Wholesale contribution per pair = 50 − 25 = $25, with the partner supplying traffic, staff, and shelf.</div>
+        <div class="formula">DTC contribution per pair = 100 − 25 − (fulfilment + returns + store/digital costs + traffic acquisition).</div>
+        <div class="formula">Total = Σ_channel [ Q_c × (p_c − cogs − v_c) ] − F_c</div>
+      </div>
+      <p>DTC looks better per pair. But Q, the volume, is a function of traffic, and in wholesale the partner&#x27;s footfall delivers that for free. Nike replaced borrowed traffic with bought traffic. The per-unit margin looked higher while the total quantity, and therefore the total profit, fell. The missing variable was Q.</p>
+      <div class="framework-row">
+        <div class="framework-letter">C</div>
+        <div><h4>Long-and-short marketing (Binet &amp; Field)</h4><p>(c) Long-and-short marketing (Binet &amp; Field). Effective brands balance brand building (long-term, emotional, reach) with activation (short-term, sales-driven). One commentator describes the shift under Donahoe as a move from a data-driven, digital-first model to a more holistic, athlete-focused strategy under Hill. Read through this lens, the digital-first period overweighted activation and let brand-building atrophy. The evidence for that specific budget claim is thin, so treat it as an analytical reading, not a proven fact.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="turnaround">
+  <div>
+    <div class="chapter-number">07</div>
+    <div class="chapter-side">7. The turnaround: &quot;Win Now&quot; and &quot;Sport Offense&quot;</div>
+  </div>
+  <div>
+    <h2>7. The turnaround: &quot;Win Now&quot; and &quot;Sport Offense&quot;</h2>
+    <p>Elliott Hill, a Nike veteran, rejoined in 2024 as CEO to turn around sluggish sales, with a plan branded Win Now. In brand-theory terms, it is a repositioning back to the core identity, with four moves:</p>
+    <div class="bullets">
+      <div class="bullet"><p>Rebuild the wholesale channel. Nike rebuilt relationships with partners like DSW and Macy&#x27;s and announced in May 2025 its return to direct sales on Amazon. The numbers agree: in FY26, wholesale grew 4%, led by double-digit growth in North America.</p></div><div class="bullet"><p>Re-center sport. The Sport Offense reorganization aligns the business by sport rather than by gender or category. This is a shift in brand architecture logic: from demographic segmentation to occasion- and passion-based organization.</p></div><div class="bullet"><p>Renew performance innovation. The stated target is to reclaim ground from maximalist running competitors such as Hoka. In Keller&#x27;s terms, this repairs the performance and judgments tiers of the pyramid.</p></div><div class="bullet"><p>Clean the marketplace. Reduce over-reliance on retro icons and clear legacy inventory to restore scarcity and heat.</p></div>
+    </div>
+    <p>The company is candid about the pace of repair. Hill said in his Q4 call that the results are not there yet. A new CFO, David Denton, takes over in mid-August 2026.</p>
+  </div>
+</section>
+
+<section class="chapter" id="watch">
+  <div>
+    <div class="chapter-number">08</div>
+    <div class="chapter-side">8. What to watch this week</div>
+  </div>
+  <div>
+    <h2>8. What to watch this week</h2>
+    <p>Going into the October 1 print, this is the shape of the debate:</p>
+    <div class="bullets">
+      <div class="bullet"><p>Consensus expects revenue of roughly $11.3 billion in Q1, down 3.2%, with Greater China forecast to fall 12.6%.</p></div>
+      <div class="bullet"><p>At least one bull case argues for a beat, projecting $11.5 billion in revenue, above Wall Street expectations of $11.3 billion.</p></div>
+      <div class="bullet"><p>Management is expected to stay conservative on guidance ahead of a November investor day.</p></div>
+    </div>
+    <div class="callout">
+      <div class="callout-label">The takeaway</div>
+      <p>The key point is that a brand turnaround takes longer than a quarter. Any single data point is noise against the three-year arc of physical availability, product pipeline, and myth renewal.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="cheat-sheet">
+  <div>
+    <div class="chapter-number">09</div>
+    <div class="chapter-side">9. Quick reference guide</div>
+  </div>
+  <div>
+    <h2>9. Quick reference guide</h2>
+    <div class="cheat">
+      <div class="cheat-header">
+        <div>If the question says...</div><div>Reach for...</div><div>Nike evidence</div>
+      </div>
+      <div class="cheat-row"><div>&quot;Why is Nike&#x27;s brand iconic?&quot;</div><div>Holt (identity myth), McCracken (meaning transfer)</div><div>Jordan; &quot;Just Do It&quot;; &quot;if you have a body you&#x27;re an athlete&quot;</div></div><div class="cheat-row"><div>&quot;Describe the identity&quot;</div><div>Aaker identity system and personality</div><div>Core: authentic performance; excitement + competence</div></div><div class="cheat-row"><div>&quot;Brand architecture?&quot;</div><div>Aaker &amp; Joachimsthaler</div><div>Nike master brand; Jordan sub-brand; Converse</div></div><div class="cheat-row"><div>&quot;Assess brand equity&quot;</div><div>Keller CBBE</div><div>Salience high; performance and judgments under challenge</div></div><div class="cheat-row"><div>&quot;Why did growth stall?&quot;</div><div>Sharp (availability, Double Jeopardy), Binet &amp; Field</div><div>Wholesale exit, shelf loss to On/Hoka, retro overreliance</div></div><div class="cheat-row"><div>&quot;Was DTC a mistake?&quot;</div><div>Channel economics, Q × margin</div><div>Contribution per unit vs volume</div></div><div class="cheat-row"><div>&quot;Strong brand, falling value?&quot;</div><div>Brand strength vs brand value</div><div>Interbrand -25.9% vs Brand Finance BSI 94.7</div></div><div class="cheat-row"><div>&quot;Handle a reputational crisis&quot;</div><div>Benoit image repair</div><div>1998 speech, factory monitoring, Kasky</div></div><div class="cheat-row"><div>&quot;Brand activism?&quot;</div><div>Segmentation, Holt, authenticity</div><div>Dream Crazy: +31% online orders, boycott noise</div></div>
+    </div>
+
+    <h3>Three formulas to memorize:</h3>
+    <div class="formula-stack">
+      <div class="formula">Brand value (Interbrand-style) ≈ Σ [ economic profit × role-of-brand index ] discounted at a rate set by brand strength</div>
+      <div class="formula">Royalty relief = PV of (revenue × royalty rate × (1 − tax))</div>
+      <div class="formula">Channel profit = Σ [ volume × (price − cost − variable cost) ] − fixed cost, where volume depends on who supplies the traffic</div>
+    </div>
+    <p>Common traps: confusing brand strength with brand value; treating DTC as automatically superior because unit margin is higher; and explaining a decline with one cause. Also don&#x27;t forget that a brand&#x27;s distinctive assets (Swoosh, Jumpman) have stayed intact throughout.</p>
+  </div>
+</section>
+
+<section class="chapter" id="discussion">
+  <div>
+    <div class="chapter-number">10</div>
+    <div class="chapter-side">10. Discussion questions</div>
+  </div>
+  <div>
+    <h2>10. Discussion questions</h2>
+    <div class="discussion">
+      <div class="question"><div class="question-num">1</div><p>If brand strength stayed high while value fell, what does that tell you about where brand equity is actually &quot;spent&quot;?</p></div><div class="question"><div class="question-num">2</div><p>Was DTC acceleration a strategy error or an execution error? What evidence would separate the two?</p></div><div class="question"><div class="question-num">3</div><p>Jordan is a sub-brand with independent equity. When does that architecture protect the master brand, and when does it endanger it?</p></div><div class="question"><div class="question-num">4</div><p>Using Holt, what new identity myth might Nike need for a generation whose sports heroes are also content creators?</p></div><div class="question"><div class="question-num">5</div><p>Design a metric set that would tell you, before quarterly revenue does, whether physical availability is being rebuilt.</p></div>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+<footer>
+  <div class="footer-brand">Samrah's Marketing Notes / Nike / Brand Strategy</div>
+  <div class="footer-mark"></div>
+</footer>
+
+</body>
+</html>
