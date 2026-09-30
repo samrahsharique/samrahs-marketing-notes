@@ -1,1 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cowboy Who Outlived His Category: Marlboro and the Anatomy of an Icon Brand | Samrah's Marketing Notes</title>
+<meta name="description" content="A lipstick-proof cigarette that nobody wanted became the world's most valuable tobacco brand. A brand strategy case in three pivots.">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#050505;--white:#fff;--red:#E4002B;--paper:#f4f4f1;--soft:#e4e4df;--mid:#70706b}
+html{scroll-behavior:smooth}
+body{font:16px/1.78 Arial,Helvetica,sans-serif;color:var(--black);background:#fff;-webkit-font-smoothing:antialiased}
+p{color:#30302e;margin-bottom:22px}
+p:last-child{margin-bottom:0}
+nav{position:fixed;inset:0 0 auto 0;height:64px;z-index:100;padding:0 42px;background:rgba(255,255,255,.94);border-bottom:1px solid #d5d5d0;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(12px)}
+.nav-brand{text-decoration:none;color:inherit;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.nav-tag{border:1px solid var(--black);padding:7px 11px 6px;font-size:9px;font-weight:700;letter-spacing:.17em;text-transform:uppercase}
 
+/* HERO */
+.hero{min-height:100vh;padding-top:64px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(320px,.7fr);background:var(--black);color:var(--white)}
+.hero-left{padding:90px 70px 72px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;border-right:1px solid #333}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:9px;font-weight:700;letter-spacing:.25em;text-transform:uppercase}
+.eyebrow::before{content:"";width:30px;height:3px;background:var(--red);transform:skewX(-28deg)}
+.roof{width:clamp(110px,13vw,190px);aspect-ratio:2/1;margin-bottom:24px;background:var(--red);clip-path:polygon(0 100%,50% 0,100% 100%,72% 100%,50% 42%,28% 100%)}
+.hero-title{max-width:1050px;font-size:clamp(46px,6.2vw,96px);line-height:.9;font-weight:900;letter-spacing:-.07em;text-transform:uppercase}
+.hero-right{padding:90px 48px 72px;display:flex;flex-direction:column;justify-content:space-between}
+.hero-kicker{color:#aaa;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.hero-subtitle{max-width:430px;margin-bottom:42px;font-size:17px;line-height:1.7;color:var(--white)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #555;border-bottom:1px solid #555}
+.hero-stat{padding:20px 12px 18px;border-right:1px solid #555}
+.hero-stat:last-child{border-right:0}
+.hero-stat b{display:block;color:var(--red);font-size:clamp(20px,2vw,28px);font-weight:900;letter-spacing:-.06em}
+.hero-stat span{display:block;margin-top:7px;color:#aaa;font-size:8px;line-height:1.4;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.hero-meta{margin-top:22px;color:#999;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+
+/* LAYOUT */
+.page{max-width:1220px;margin:auto;padding:0 52px}
+.chapter{padding:105px 0;display:grid;grid-template-columns:240px minmax(0,1fr);gap:90px;border-bottom:1px solid var(--soft)}
+.chapter>div:first-child{position:sticky;top:104px;align-self:start}
+.num{color:#d1d1cc;font-size:76px;line-height:.8;font-weight:900;letter-spacing:-.09em}
+.side{margin-top:18px;color:var(--mid);font-size:9px;font-weight:800;line-height:1.45;letter-spacing:.19em;text-transform:uppercase}
+h2{max-width:850px;margin-bottom:30px;font-size:clamp(29px,3.4vw,48px);line-height:1.02;font-weight:850;letter-spacing:-.05em;text-transform:uppercase}
+h3{margin:40px 0 16px;font-size:18px;font-weight:850;letter-spacing:-.02em;text-transform:uppercase}
+.lead{font-size:18px;line-height:1.8}
+
+/* COMPONENTS */
+.callout{margin:38px 0;padding:30px 34px;background:var(--black);border-left:8px solid var(--red)}
+.callout b{display:block;margin-bottom:12px;color:var(--red);font-size:9px;letter-spacing:.2em;text-transform:uppercase}
+.callout p{color:#f4f4f4;font-size:17px}
+.bullets{margin:26px 0 30px;border-top:1px solid var(--black)}
+.bullets p{display:grid;grid-template-columns:28px 1fr;gap:16px;margin:0;padding:18px 0;border-bottom:1px solid var(--soft)}
+.bullets p::before{content:"";width:11px;height:11px;margin-top:8px;background:var(--red);transform:skewX(-22deg)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);margin:34px 0;border-top:1px solid var(--black);border-left:1px solid var(--black)}
+.card{padding:26px 22px;border-right:1px solid var(--black);border-bottom:1px solid var(--black)}
+.card small{display:block;margin-bottom:10px;color:var(--mid);font-size:8px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.card h4{margin-bottom:8px;font-size:18px;line-height:1.15;font-weight:850}
+.card p{margin:0;font-size:14px;line-height:1.6}
+.formula{margin:30px 0;border-top:1px solid var(--black);border-bottom:1px solid var(--black)}
+.formula div{padding:20px 0;border-bottom:1px solid var(--soft);font:17px/1.65 Georgia,"Times New Roman",serif}
+.formula div:last-child{border-bottom:0}
+.scroll{overflow-x:auto;margin:32px 0;border:1px solid var(--black)}
+table{width:100%;min-width:640px;border-collapse:collapse;font-size:13.5px}
+th{padding:14px 16px;background:var(--black);color:var(--red);font-size:9px;letter-spacing:.14em;text-align:left;text-transform:uppercase}
+td{padding:14px 16px;border-top:1px solid var(--soft);vertical-align:top;color:#3b3b38;line-height:1.5}
+tr:nth-child(even) td{background:var(--paper)}
+td:first-child{color:var(--black);font-weight:700}
+.qs{margin-top:30px;border-top:1px solid var(--black)}
+.q{display:grid;grid-template-columns:54px 1fr;padding:20px 0;border-bottom:1px solid var(--soft)}
+.q b{font-size:22px;font-weight:900}
+.q p{margin:0}
+footer{padding:38px 44px;background:var(--black);color:var(--white);display:flex;justify-content:space-between;align-items:center;gap:18px}
+.footer-brand{font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.footer-mark{width:80px;height:18px;border-bottom:6px solid var(--red);transform:skewX(-24deg)}
+
+@media(max-width:900px){
+nav{padding:0 20px}
+.hero{grid-template-columns:1fr}
+.hero-left{padding:78px 24px 50px;border-right:0;border-bottom:1px solid #333}
+.hero-right{padding:42px 24px 60px}
+.page{padding:0 24px}
+.chapter{grid-template-columns:1fr;gap:30px;padding:70px 0}
+.chapter>div:first-child{position:static}
+.num{font-size:62px}
+.cards{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+body{font-size:15px}
+.nav-tag{display:none}
+.hero-stats{grid-template-columns:1fr}
+.hero-stat{border-right:0;border-bottom:1px solid #555}
+.hero-stat:last-child{border-bottom:0}
+.page{padding:0 20px}
+footer{flex-direction:column;align-items:flex-start;padding:34px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="../../../index.html">Samrah's Marketing Notes</a>
+  <span class="nav-tag">Brand Strategy</span>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">Marlboro / Brand Strategy</div>
+    <div>
+      <div class="roof" role="img" aria-label="Red roof shape"></div>
+      <h1 class="hero-title">The cowboy who outlived his category</h1>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-kicker">Samrah's Marketing Notes / Brand Strategy Series</div>
+    <div>
+      <p class="hero-subtitle">Same cigarette, different meaning: how a failed women's brand became the world's most valuable tobacco brand, and why it now funds its own replacement.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>&lt;0.25%</b><span>US share, early 1950s</span></div>
+        <div class="hero-stat"><b>-26%</b><span>PMI stock on Marlboro Friday</span></div>
+        <div class="hero-stat"><b>11.0%</b><span>Record international share, Q2 2026</span></div>
+      </div>
+      <div class="hero-meta">Samrah Sharique / Brand Strategy / 2026</div>
+    </div>
+  </div>
+</section>
+
+<main class="page">
+
+<section class="chapter">
+  <div><div class="num">00</div><div class="side">The setup</div></div>
+  <div>
+    <h2>A lipstick-proof cigarette that nobody wanted</h2>
+    <p class="lead">Philip Morris launched Marlboro in 1924 as a women's cigarette: a filter with ivory or red tips to mask lipstick, sold on mildness under the slogan "Mild as May." It flopped. By the early 1950s it held less than a quarter of one percent of the US market.</p>
+    <p>Seventy years on, Marlboro matched a record 11.0% share of the international cigarette category in Q2 2026, and it has been ranked the world's most valuable tobacco brand for ten years running. The product barely changed. The meaning, the price, the packaging and finally the category did. Each pivot is a lesson in a different corner of brand theory.</p>
+    <p>A note on the subject: this is a study of brand mechanics. The product causes serious disease, and that fact shapes every regulatory event below. It is also why the case teaches so much. When the product's harm is the constraint, the brand carries the entire commercial load.</p>
+    <div class="callout"><b>The thesis</b><p>Marlboro is the clearest case of a brand whose product hardly moved while everything that mattered did: first the meaning (1954), then the price (1993), then the category (2010s onward).</p></div>
+  </div>
+</section>
+
+<section class="chapter" id="glance">
+  <div><div class="num">01</div><div class="side">The case at a glance</div></div>
+  <div>
+    <h2>The case at a glance</h2>
+    <div class="bullets">
+      <p><span><b>Scale.</b> Q2 2026 net revenues rose 10.4% to $11.19 billion, with an adjusted operating margin of 42.6%.</span></p>
+      <p><span><b>Pricing power.</b> In International Combustibles, pricing added 10.0% on volume growth of 1.1%, lifting net revenues 9.8%.</span></p>
+      <p><span><b>A shrinking pie.</b> Management guides to a 2–3% decline in cigarette volumes for 2026, offset by high single-digit smoke-free growth.</span></p>
+      <p><span><b>The transition.</b> Smoke-free products are about 42% of net revenues and sold in 109 markets. Brand Finance notes IQOS has already passed Marlboro in net revenues.</span></p>
+      <p><span><b>Valuation.</b> Brand Finance put Marlboro at $32.6 billion in 2024, down 6%. Kantar's figure for the same year was about $57.8 billion. A 2012 valuation cited in a tobacco-control journal was $73.6 billion. Methods differ, so compare direction, not levels.</span></p>
+    </div>
+    <div class="callout"><b>Keep in mind</b><p>Record share of a shrinking pie. That phrase is the key to the ending.</p></div>
+  </div>
+</section>
+
+<section class="chapter" id="evolution">
+  <div><div class="num">02</div><div class="side">The evolution in one table</div></div>
+  <div>
+    <h2>Eight moves, one brand</h2>
+    <div class="scroll">
+    <table>
+      <tr><th>Year</th><th>Move</th><th>Theory lens</th></tr>
+      <tr><td>1924</td><td>Launched as a mild, filtered women's cigarette</td><td>Niche positioning the market didn't need</td></tr>
+      <tr><td>1954</td><td>Leo Burnett repositions it for men</td><td>Repositioning; symbolic consumption</td></tr>
+      <tr><td>1970s–90s</td><td>Sponsorship, especially Formula 1, carries the brand as advertising is restricted</td><td>Sponsorship-linked marketing; image transfer</td></tr>
+      <tr><td>1993</td><td>The 20% price cut, "Marlboro Friday"</td><td>Price-premium tolerance; brand vs. generics</td></tr>
+      <tr><td>2008</td><td>Philip Morris International spins off from Altria</td><td>Territory split, two strategies</td></tr>
+      <tr><td>2012</td><td>Australia introduces plain packaging</td><td>Regulatory stress test of brand equity</td></tr>
+      <tr><td>2013 onward</td><td>Reduced-risk alliance; IQOS sold under and alongside Marlboro</td><td>Brand extension; self-disruption</td></tr>
+      <tr><td>2020s</td><td>Smoke-free nears half of revenue; cigarettes fund the shift</td><td>Cash-cow financing; customer migration</td></tr>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="pivot1">
+  <div><div class="num">03</div><div class="side">Pivot #1: the meaning</div></div>
+  <div>
+    <h2>Same product, new person</h2>
+    <p>In 1950s research, men said they would consider filters but feared being seen with a brand marketed to women. The barrier wasn't health or taste. It was social meaning.</p>
+    <p>Leo Burnett's answer was counterintuitive. While rivals stacked up technical claims about their filters, he made ads with no health talk at all and sold a man instead. The plan was a lineup of manly figures with the cowboy first. When share climbed from under 1% to fourth place, Philip Morris dropped the lineup and kept the cowboy. In the US the campaign ran from 1954 to 1999. Frank Gianninoto's red-and-white pack carried Caesar's "I came; I saw; I conquered" on top.</p>
+    <h3>Four frameworks at work</h3>
+    <div class="bullets">
+      <p><span><b>Ries and Trout's repositioning.</b> Positioning is what you do to the mind of the prospect, not to the product. On a perceptual map, Marlboro didn't move on the product axis at all. It moved on the perceptual one.</span></p>
+      <p><span><b>Keller's imagery.</b> The pyramid separates performance (what the product does) from imagery (who uses it). Marlboro built almost everything on imagery, which is why it could ignore the filter debate.</span></p>
+      <p><span><b>McCracken's meaning transfer.</b> Meaning moves from culture (the frontier, self-reliance) to a figure (the cowboy), then to the pack, then to the consumer who carries it.</span></p>
+      <p><span><b>The badge-product insight.</b> A pack is used in public, on bar tops and in shirt pockets. For products consumed in front of others, the brand is a signalling device, and imagery can beat taste.</span></p>
+    </div>
+    <div class="callout"><b>The aha</b><p>The brand that became the world's most powerful symbol of masculinity began as a women's cigarette. Positioning is a claim about who you are for, and that claim can be rewritten while the product stays the same.</p></div>
+  </div>
+</section>
+
+<section class="chapter" id="identity">
+  <div><div class="num">04</div><div class="side">Identity: the pack is the brand</div></div>
+  <div>
+    <h2>Kapferer's prism, applied</h2>
+    <div class="cards">
+      <div class="card"><small>Physique</small><h4>The roof and the pack</h4><p>Red-and-white geometry, the chevron, the hard pack.</p></div>
+      <div class="card"><small>Personality</small><h4>Rugged and taciturn</h4><p>Self-sufficient, few words, no apology.</p></div>
+      <div class="card"><small>Culture</small><h4>The frontier</h4><p>The American West and its promise of freedom.</p></div>
+      <div class="card"><small>Relationship</small><h4>An unspoken fraternity</h4><p>Belonging to a tough, silent club.</p></div>
+      <div class="card"><small>Reflection</small><h4>The independent man</h4><p>How the brand pictures its typical user.</p></div>
+      <div class="card"><small>Self-image</small><h4>"I answer to no one"</h4><p>How the user feels carrying it.</p></div>
+    </div>
+    <p>The strongest test of identity is what survives when everything else is stripped away. Distinctive brand assets, in the language of Romaniuk and Sharp, are cues that trigger the brand without a name. Marlboro's red-and-white geometry is one. A tobacco-control study documents how the logo on Ferrari cars was replaced in 2007 by a "barcode" design, and how Philip Morris recognizes the shared red of Marlboro and Ferrari as a way to promote association. The authors concluded these were "alibi" logos that counted as advertising prohibited by the 2005 EU directive. Whatever one thinks of that, the design point holds: a mature brand can survive on a colour code and a pattern.</p>
+  </div>
+</section>
+
+<section class="chapter" id="siege">
+  <div><div class="num">05</div><div class="side">Marketing under siege</div></div>
+  <div>
+    <h2>Sponsorship as the workaround</h2>
+    <p>When broadcast advertising closed in several jurisdictions, the money moved to sponsorship-linked marketing. Marlboro's Formula 1 story is the standard example:</p>
+    <div class="bullets">
+      <p><span>Marlboro first appeared in F1 in 1972 with the BRM team.</span></p>
+      <p><span>Between 1974 and 1996, Marlboro McLaren won nine drivers' world championships and seven constructors' titles.</span></p>
+      <p><span>Marlboro became Ferrari's title sponsor in 1997, and that partnership ended after five decades.</span></p>
+      <p><span>The identified F1 partner was later changed from Marlboro to a newly developed brand, Mission Winnow.</span></p>
+    </div>
+    <p>The theory here is image transfer: a sponsor's brand borrows the associations of the property, in this case speed, risk and elite performance. Racing suited Marlboro's identity almost perfectly, since it is masculine, global and full of red. It was integrated marketing communications by necessity. When one channel closes, the brand must keep its meaning alive through the others.</p>
+  </div>
+</section>
+
+<section class="chapter" id="friday">
+  <div><div class="num">06</div><div class="side">Pivot #2: the price</div></div>
+  <div>
+    <h2>Marlboro Friday, the day brands "died"</h2>
+    <p>On April 2, 1993, Philip Morris announced a 20% price cut on Marlboro to fight generic competitors. Its stock fell 26% that day, wiping out about $10 billion of market value, and other brand owners such as Coca-Cola and Tambrands fell with it. The headlines declared the death of the premium brand as an idea.</p>
+    <p>What actually happened is the interesting part. Since 1982, deep-discount and generic brands had grown from about 1% of the market to about 36%. Marlboro kept gaining share within the premium segment but was losing overall share, sliding from 24.3% to 22.2% in the prior year. The cut lowered the national average price from $2.20 to $1.80 per pack. Brand Finance's David Haigh argues it stopped a price war, because Marlboro's managers had wrongly treated the brand's absolute price as sacrosanct. The stock reportedly recovered within two years, and Harvard Business School published a case on the episode in 1996.</p>
+    <h3>The right framework: the tolerance band</h3>
+    <div class="formula">
+      <div>Price premium: PP = (P_brand − P_reference) / P_reference</div>
+      <div>Share holds while PP ≤ PP*, the tolerance threshold. Beyond PP*, defection accelerates.</div>
+    </div>
+    <p>Brand equity does not make a brand immune to price competition. It buys a tolerance band. For years Marlboro raised prices while generics stayed cheap, until the premium left the band. The 1993 cut recalibrated the gap. It was not an admission that the brand had no value.</p>
+    <div class="callout"><b>The aha</b><p>Marlboro Friday looks like the day the brand lost its power. It was the day the brand's owner found out where the edge of that power was.</p></div>
+  </div>
+</section>
+
+<section class="chapter" id="plain">
+  <div><div class="num">07</div><div class="side">The natural experiment</div></div>
+  <div>
+    <h2>What happens when the imagery is removed</h2>
+    <p>If imagery drives value, what happens when a government removes it? Australia ran the test. From December 1, 2012, all tobacco products sold there had to come in identical packaging: a standard dark brown pack, brand names in one uniform font, and health warnings covering 75% of the front.</p>
+    <div class="bullets">
+      <p><span><b>Perceived quality fell.</b> Surveys found more smokers disliked their pack, rated quality and value lower, and disagreed that brands differed in prestige.</span></p>
+      <p><span><b>Downtrading followed.</b> A Chicago Booth study found monthly sales fell 7.5%, and higher-quality brands lost share to lower-tier competitors.</span></p>
+      <p><span><b>Identity weakened.</b> Social-identity research found that identification with fellow smokers of the same brand, and positive brand stereotypes, declined.</span></p>
+    </div>
+    <p>The vulnerability was anticipated. Tobacco firms use family branding and microsegmentation to soften marketing restrictions, and colour had become a key visual signifier separating one variant from the next. Plain packaging removes colour as a decision shortcut.</p>
+    <p>A fair account notes this is contested: critics argue that smoking rates in Australia have stalled and that no research directly links plain packaging to reduced smoking. But the brand-equity mechanism is clear. Remove the marketing mix except product and price, and the premium compresses.</p>
+  </div>
+</section>
+
+<section class="chapter" id="pivot3">
+  <div><div class="num">08</div><div class="side">Pivot #3: the category</div></div>
+  <div>
+    <h2>The brand that funds its own replacement</h2>
+    <p>Altria spun off Philip Morris International in 2008, so Marlboro has two owners: Philip Morris USA at home and PMI in more than 180 markets abroad. In 2013 the two agreed to share licensing and research on reduced-risk products, and PMI adopted the slogan "Designing a smoke-free future." IQOS was introduced in some countries under the Marlboro brand, and in the US it is marketed by Altria as Marlboro HeatSticks.</p>
+    <div class="bullets">
+      <p><span><b>Brand extension and cannibalization.</b> Normally you protect the parent from an extension that undermines it. Here the cannibalization is intended. Better to cannibalize yourself than be cannibalized by others.</span></p>
+      <p><span><b>Customer equity (Rust, Zeithaml and Lemon).</b> The real asset being migrated is the relationship: value equity + brand equity + relationship equity. Marlboro holds the trust and the habit, and the goal is to carry them over to new products.</span></p>
+      <p><span><b>The cash-cow logic (BCG).</b> High share in a low-growth, shrinking category. Q2 shows the play: 10% pricing on 1.1% volume funds a business where smoke-free shipments are growing 7.5%.</span></p>
+    </div>
+    <div class="formula">
+      <div>Revenue growth ≈ price growth + volume growth (+ mix). If cigarette volume falls 2–3% a year, price must rise more than that just to hold revenue flat. Marlboro is achieving several times that.</div>
+    </div>
+    <p>Not everyone has been as lucky. BAT announced a $31.5 billion impairment on some of its US cigarette brands, which Brand Finance called the first significant write-down in a major market. A brand's book value is only as durable as its expected cash flows.</p>
+  </div>
+</section>
+
+<section class="chapter" id="legitimacy">
+  <div><div class="num">09</div><div class="side">The uncomfortable question</div></div>
+  <div>
+    <h2>Legitimacy</h2>
+    <p>Under legitimacy theory (Suchman), an organization survives only if society sees its activities as acceptable. Marlboro's owners face a paradox: they lead in cigarettes while stating an intention to end them. That gap invites scepticism however sincere the transition is.</p>
+    <p>The brand's image is now split between a heritage identity (the cowboy) and a future identity (the smoke-free company). Managing that dual identity credibly, without pretending the first is harmless, is the hardest brand problem in the case.</p>
+  </div>
+</section>
+
+<section class="chapter" id="reference">
+  <div><div class="num">10</div><div class="side">Quick reference guide</div></div>
+  <div>
+    <h2>Quick reference guide</h2>
+    <div class="scroll">
+    <table>
+      <tr><th>If the question is...</th><th>Reach for...</th><th>Marlboro evidence</th></tr>
+      <tr><td>How does repositioning work?</td><td>Ries and Trout, perceptual mapping</td><td>Women's mildness to male ruggedness, same product</td></tr>
+      <tr><td>Where does brand value come from?</td><td>Keller's imagery, McCracken</td><td>Cowboy myth transferred to the pack</td></tr>
+      <tr><td>What is a distinctive asset?</td><td>Romaniuk and Sharp</td><td>Red-and-white roof; Ferrari barcode</td></tr>
+      <tr><td>Can a brand survive price competition?</td><td>Price-premium tolerance band</td><td>Marlboro Friday; generics at about 36%</td></tr>
+      <tr><td>What causes equity?</td><td>Natural experiments</td><td>Australian plain packaging</td></tr>
+      <tr><td>Marketing under regulation?</td><td>Sponsorship-linked marketing, IMC</td><td>Formula 1</td></tr>
+      <tr><td>Extending a shrinking brand?</td><td>Extension, cannibalization, customer equity</td><td>IQOS and Marlboro HeatSticks</td></tr>
+      <tr><td>Why do valuations disagree?</td><td>Methodology</td><td>$32.6B vs. $57.8B in 2024</td></tr>
+    </table>
+    </div>
+    <h3>Three formulas worth keeping</h3>
+    <div class="formula">
+      <div>Price premium = (P_brand − P_reference) / P_reference, with a tolerance threshold PP* beyond which share loss accelerates</div>
+      <div>Brand value (royalty relief) = PV of [ revenue × royalty rate × (1 − tax) ]</div>
+      <div>Customer equity = Value equity + Brand equity + Relationship equity</div>
+    </div>
+    <p>Common traps: confusing a price shock with equity collapse, treating brand strength and brand value as the same measure, and reading a record market share without asking whether the underlying category is growing.</p>
+  </div>
+</section>
+
+<section class="chapter" id="discussion">
+  <div><div class="num">11</div><div class="side">Discussion questions</div></div>
+  <div>
+    <h2>Discussion questions</h2>
+    <div class="qs">
+      <div class="q"><b>1</b><p>Marlboro Friday cut the price by about 18–20%, yet the stock recovered. What does that say about the difference between price and premium positioning?</p></div>
+      <div class="q"><b>2</b><p>The plain-packaging evidence suggests imagery carries much of a brand's value. What is left of a brand when imagery is removed, and how would you measure it?</p></div>
+      <div class="q"><b>3</b><p>IQOS is an extension designed to cannibalize its parent. When does self-cannibalization create value, and when does it destroy it?</p></div>
+      <div class="q"><b>4</b><p>Two companies own Marlboro in different territories with different ambitions. What are the risks and benefits of one global brand under two strategies?</p></div>
+      <div class="q"><b>5</b><p>How should a brand with a harmful heritage manage a dual identity credibly?</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">Samrah's Marketing Notes / Marlboro / Brand Strategy</div>
+  <div class="footer-mark"></div>
+</footer>
+
+</body>
+</html>
